@@ -1,0 +1,52 @@
+#==================== wx-args setting ====================#
+wx-applet:
+  appid: wx394581d5f7b79fee
+  secret: f75981a1c33758c81803ce478f6cab28
+  grant_type: authorization_code
+
+#==================== Tomcat Setting =====================#
+http:
+  port: 80
+server:
+  port: 443
+  ssl:
+    key-store: cert-1542771005276_antony0127.cn.pfx
+    key-store-password: 1P4u9dwU
+  tomcat:
+    uri-encoding: UTF-8
+
+#==================== logging Setting =====================#
+logging:
+  level:
+    org.springframework: info
+    org.hibernate: info
+  file: logs/we-lightHouse.log
+
+#==================== spring Setting =====================#
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+  datasource:
+    driver-Class-Name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: antony
+    url: jdbc:mysql://127.0.0.1:3306/db_lht?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+

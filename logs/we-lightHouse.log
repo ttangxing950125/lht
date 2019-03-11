@@ -1,0 +1,136 @@
+2019-03-11 09:20:13.105  INFO 7428 --- [main] com.bth.lht.LhtApplication               : Starting LhtApplication on DESKTOP-S54C630 with PID 7428 (C:\Users\Antony\IdeaProjects\lht\target\classes started by Antony in C:\Users\Antony\IdeaProjects\lht)
+2019-03-11 09:20:13.139  INFO 7428 --- [main] com.bth.lht.LhtApplication               : No active profile set, falling back to default profiles: default
+2019-03-11 09:20:17.041  INFO 7428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-11 09:20:17.493  INFO 7428 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 417ms. Found 3 repository interfaces.
+2019-03-11 09:20:18.546  INFO 7428 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4b161f35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-11 09:20:18.787  INFO 7428 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$ca966c67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-11 09:20:20.449  INFO 7428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 443 (https) 80 (http)
+2019-03-11 09:20:20.604  INFO 7428 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-11 09:20:20.604  INFO 7428 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-03-11 09:20:20.621  INFO 7428 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JAVA\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;G:\JAVA\jdk1.8.0_101\bin;G:\JAVA\jdk1.8.0_101\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Server 5.6\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;G:\apache-maven-3.5.2\bin;G:\Python\Python37;G:\Python\Python37\Scripts;G:\Program Files\Git\cmd;G:\Program Files\nodejs\;G:\Program Files\Microsoft VS Code\bin;G:\Program Files\Geth;G:\Python\Python37\Scripts\;G:\Python\Python37\;G:\Bandizip;G:\AppData\Local\Android\sdk\platform-tools;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;C:\Users\Antony\AppData\Local\Microsoft\WindowsApps;G:\Program Files\Fiddler;G:\Program Files\Git\cmd;G:\gradle-4.9\bin;G:\Redis-x64-3.2.100;C:\Users\Antony\AppData\Roaming\npm;.]
+2019-03-11 09:20:21.181  INFO 7428 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-11 09:20:21.182  INFO 7428 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7702 ms
+2019-03-11 09:20:22.110  INFO 7428 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-03-11 09:20:22.348  INFO 7428 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-03-11 09:20:22.352  INFO 7428 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-03-11 09:20:22.840  INFO 7428 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-03-11 09:20:23.811  INFO 7428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-03-11 09:20:24.910  INFO 7428 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-03-11 09:20:24.955  INFO 7428 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-03-11 09:20:25.401  WARN 7428 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-03-11 09:20:27.364  INFO 7428 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-03-11 09:20:29.430  WARN 7428 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-03-11 09:20:30.189  INFO 7428 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-11 09:20:30.721  INFO 7428 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-11 09:20:30.760  INFO 7428 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-03-11 09:20:30.771  INFO 7428 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-11 09:20:30.800  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 用户接口
+2019-03-11 09:20:30.804  INFO 7428 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='用户接口', position=0, controller=com.bth.lht.rest.userController.UserController}]] 
+2019-03-11 09:20:30.806  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reward was 用户接口
+2019-03-11 09:20:30.806  INFO 7428 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: reward belongs to groups: [[ResourceGroup{groupName='用户接口', position=0, controller=com.bth.lht.rest.userController.UserController}]] 
+2019-03-11 09:20:30.807  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was 用户接口
+2019-03-11 09:20:30.807  INFO 7428 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: save belongs to groups: [[ResourceGroup{groupName='用户接口', position=0, controller=com.bth.lht.rest.userController.UserController}]] 
+2019-03-11 09:20:30.809  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was user-info-controller
+2019-03-11 09:20:30.821  INFO 7428 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: save belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.bth.lht.rest.userController.UserInfoController}]] 
+2019-03-11 09:20:30.843  INFO 7428 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/用户接口 Description: 用户接口 Position: 0
+2019-03-11 09:20:30.845  INFO 7428 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-info-controller Description: user-info-controller Position: 0
+2019-03-11 09:20:30.929  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:30.937  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:30.948  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:30.948  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:31.060  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:31.061  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:31.067  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:31.067  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-03-11 09:20:31.069  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(false)
+2019-03-11 09:20:31.069  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(false)
+2019-03-11 09:20:31.078  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(false)
+2019-03-11 09:20:31.079  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(false)
+2019-03-11 09:20:31.080  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.080  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.081  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.081  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.085  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.085  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.086  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(true)
+2019-03-11 09:20:31.086  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(true)
+2019-03-11 09:20:31.090  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(true)
+2019-03-11 09:20:31.090  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(true)
+2019-03-11 09:20:31.095  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.096  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-03-11 09:20:31.096  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(true)
+2019-03-11 09:20:31.096  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(true)
+2019-03-11 09:20:31.097  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(true)
+2019-03-11 09:20:31.098  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(true)
+2019-03-11 09:20:31.100  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(true)
+2019-03-11 09:20:31.101  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(true)
+2019-03-11 09:20:31.102  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(true)
+2019-03-11 09:20:31.102  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(true)
+2019-03-11 09:20:31.104  INFO 7428 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /userInfo/save.com.bth.lht.rest.userController.UserInfoController.save.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.104  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /userInfo/save.com.bth.lht.rest.userController.UserInfoController.save.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.465  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was user-info-controller
+2019-03-11 09:20:31.468  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was user-info-controller
+2019-03-11 09:20:31.496  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.496  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.497  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.497  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.498  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.498  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.498  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.499  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.BaseResponse(true)
+2019-03-11 09:20:31.499  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.499  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.500  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.500  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.514  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.514  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.515  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.516  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.ProjectRewardInfoEO(false)
+2019-03-11 09:20:31.516  INFO 7428 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /reward.com.bth.lht.rest.userController.UserController.reward.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.516  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /reward.com.bth.lht.rest.userController.UserController.reward.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.530  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reward was 用户接口
+2019-03-11 09:20:31.533  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reward was 用户接口
+2019-03-11 09:20:31.543  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.543  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.543  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.543  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.547  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.548  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.549  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.549  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.UserRequest(false)
+2019-03-11 09:20:31.549  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.549  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.550  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.550  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.552  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.552  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.552  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.552  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.553  INFO 7428 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /save.com.bth.lht.rest.userController.UserController.save.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.553  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /save.com.bth.lht.rest.userController.UserController.save.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.557  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was 用户接口
+2019-03-11 09:20:31.559  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was 用户接口
+2019-03-11 09:20:31.560  INFO 7428 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2019-03-11 09:20:31.562  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.563  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.563  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.563  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.565  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.565  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.566  INFO 7428 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.566  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.UserInfoRequest(false)
+2019-03-11 09:20:31.566  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.566  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.567  INFO 7428 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.567  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-03-11 09:20:31.568  INFO 7428 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /bindInfo/{id}.com.bth.lht.rest.userController.UserController.update.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.568  INFO 7428 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /bindInfo/{id}.com.bth.lht.rest.userController.UserController.update.DefaultGenericTypeNamingStrategy
+2019-03-11 09:20:31.574  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 用户接口
+2019-03-11 09:20:31.575  INFO 7428 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 用户接口
+2019-03-11 09:20:32.647  INFO 7428 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 443 (https) 80 (http) with context path ''
+2019-03-11 09:20:32.691  INFO 7428 --- [main] com.bth.lht.LhtApplication               : Started LhtApplication in 21.943 seconds (JVM running for 30.831)
+2019-03-11 09:21:33.796  INFO 7428 --- [https-jsse-nio-443-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-11 09:21:33.797  INFO 7428 --- [https-jsse-nio-443-exec-7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-11 09:21:33.810  INFO 7428 --- [https-jsse-nio-443-exec-7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
