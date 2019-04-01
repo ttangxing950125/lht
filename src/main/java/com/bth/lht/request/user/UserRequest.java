@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @ApiModel("绑定用户基本信息请求")
 public class UserRequest {
     private String wxOpenid;
-    private String wxNickName;
+    private String nickName;
     private String avatarUrl;
     private BigDecimal integral;
     private Integer phoneNumber;

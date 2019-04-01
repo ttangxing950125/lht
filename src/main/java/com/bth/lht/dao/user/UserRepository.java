@@ -11,4 +11,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  **/
 public interface UserRepository extends JpaRepository<UserEO,String> {
     UserEO findUserEOById(String id);
+    UserEO findByWxOpenid(String openid);
 }

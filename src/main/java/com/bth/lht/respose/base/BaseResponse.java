@@ -17,6 +17,9 @@ public class BaseResponse {
     }
     public BaseResponse() {
     }
+
+
+
     /**
      * 描述信息
      */
@@ -26,4 +29,5 @@ public class BaseResponse {
      * 描述信息
      */
     private String desc = HttpStatus.OK.getReasonPhrase();
+
 }

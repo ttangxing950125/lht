@@ -18,4 +18,6 @@ public class MultiResponse<T> extends BaseResponse {
         super(status, desc);
         this.data = data;
     }
+
+
 }
