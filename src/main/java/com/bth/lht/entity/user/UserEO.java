@@ -5,6 +5,7 @@ import com.bth.lht.entity.BaseEntity;
 import com.bth.lht.entity.project.MissionUserEO;
 import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.team.TeamEO;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.ToString;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -50,4 +51,16 @@ public class UserEO extends BaseEntity {
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<TeamEO> teamEOS;
 
+    @JsonBackReference
+    public void setMissionUserEOS(List<MissionUserEO> missionUserEOS) {
+        this.missionUserEOS = missionUserEOS;
+    }
+    @JsonBackReference
+    public void setTeamEOS(List<TeamEO> teamEOS) {
+        this.teamEOS = teamEOS;
+    }
+    @JsonBackReference
+    public void setCreateMissionEOS(List<MissionsEO> createMissionEOS) {
+        this.createMissionEOS = createMissionEOS;
+    }
 }

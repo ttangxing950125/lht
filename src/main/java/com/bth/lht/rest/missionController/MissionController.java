@@ -9,6 +9,7 @@ import com.bth.lht.request.mission.MissionRequest;
 import com.bth.lht.respose.base.BaseResponse;
 import com.bth.lht.respose.base.MultiResponse;
 import com.bth.lht.respose.base.OneResponse;
+import com.bth.lht.respose.mission.MissionUserVO;
 import com.bth.lht.respose.mission.MissionVO;
 import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.project.MissionUserService;
@@ -45,7 +46,7 @@ public class MissionController extends BaseController {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-    private MissionsRepository missionsRepository;
+    private UserService userService;
     @Autowired
     private MissionUserService missionUserService;
 
@@ -59,7 +60,15 @@ public class MissionController extends BaseController {
         log.info("用户【{openid}】请求",openid);
         List<MissionsEO> list = missionsService.list();
         List<MissionVO> missionVOList = ModelMapperUtil.getStrictModelMapper().map(list,new TypeToken< List<MissionVO>>(){}.getType());
+        return successMulti(missionVOList);
+    }
 
+    @GetMapping("listPublish")
+    @ApiOperation("查找指定用户发布的任务")
+    public MultiResponse listPublish(@RequestHeader("token")String token){
+        String openid = TokenUtil.getUserOpenidByToken(token);
+        List<MissionsEO> list = missionsService.findByLeader(userService.findByOpenid(openid));
+        List<MissionVO> missionVOList = ModelMapperUtil.getStrictModelMapper().map(list,new TypeToken< List<MissionVO>>(){}.getType());
         return successMulti(missionVOList);
     }
 
@@ -75,38 +84,14 @@ public class MissionController extends BaseController {
     public OneResponse<MissionsEO> add(@Validated @RequestBody MissionRequest missionRequest,@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);
         MissionsEO missionsEO = ModelMapperUtil.getStrictModelMapper().map(missionRequest,MissionsEO.class);
-        missionsEO.setLeaderEO(userRepository.findByWxOpenid(openid));
+        missionsEO.setLeaderEO(userRepository.findUserEOByWxOpenid(openid));
         log.info("开始添加任务");
         missionsService.save(missionsEO);
         log.info("结束添加任务");
         return successOne(missionsEO);
     }
 
-    /**
-     * 接受任务，重新添加任务，但leaderID不能修改，为任务加上用户openid或者团队id 多对多
-     * @return
-     */
-    @PutMapping("join/{id}")
-    @ApiOperation("接受任务")
-    public BaseResponse join(@PathVariable("id")String id,@RequestHeader("token")String token){
-        MissionUserEO missionUserEO = new MissionUserEO();
-        String openid = TokenUtil.getUserOpenidByToken(token);
 
-        //得到该用户
-        UserEO userEO = userRepository.findByWxOpenid(openid);
-        //接收请求对象，并映射为实体
-        MissionsEO missionsEO = missionsService.get(id);
-        if (missionsEO!=null) {
-            //接收任务的团队或者个人
-            missionUserEO.setStatus("doing");
-            missionUserEO.setMissionsEO(missionsEO);
-            missionUserEO.setUserEO(userEO);
-            missionUserService.save(missionUserEO);
-        }else {
-            System.out.println("没找到任务");
-        }
-        return new BaseResponse();
-    }
 
     /**
      * 拆分任务，注：拆分任务逻辑：重新添加该任务，需要修改其leaderID,并修改其任务等级
@@ -129,16 +114,5 @@ public class MissionController extends BaseController {
     }
 
 
-    /**
-     * 按类别查找查找任务 进行中 待审核 已完成 0 1 2
-     */
-    @GetMapping("doing/{category}")
-    @ApiOperation("查找进行中的任务")
-    public BaseResponse listDoing(@RequestHeader("token")String token,@PathVariable("category")String category){
-        String openid = TokenUtil.getUserOpenidByToken(token);
-        System.out.println(category+"   "+token);
-        //通过类别查找   0  进行中 1 待审核 2 已完成 3其他
 
-        return new BaseResponse();
-    }
 }

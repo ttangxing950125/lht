@@ -1,6 +1,7 @@
 package com.bth.lht.service.impl.project;
 
 import com.bth.lht.dao.project.MissionsRepository;
+import com.bth.lht.entity.project.MissionUserEO;
 import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.request.mission.MissionRequest;
@@ -40,8 +41,12 @@ public class MissionsServiceImpl implements MissionsService {
     }
 
     @Override
-    public MissionsEO findByLeader(UserEO userEO) {
+    public List<MissionsEO> findByLeader(UserEO userEO) {
 
         return missionsRepository.findMissionsEOByLeaderEO(userEO);
     }
+
+
+
+
 }

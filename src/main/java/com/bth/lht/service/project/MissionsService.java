@@ -1,5 +1,6 @@
 package com.bth.lht.service.project;
 
+import com.bth.lht.entity.project.MissionUserEO;
 import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.request.mission.MissionRequest;
@@ -14,8 +15,8 @@ import java.util.List;
  **/
 public interface MissionsService {
     public List<MissionsEO> list();
-
     MissionsEO save(MissionsEO missionsEO);
     MissionsEO get(String id);
-    MissionsEO findByLeader(UserEO userEO);
+    List<MissionsEO> findByLeader(UserEO userEO);
+
 }

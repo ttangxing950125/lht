@@ -10,6 +10,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @create: 2018-12-21 18:13
  **/
 public interface UserRepository extends JpaRepository<UserEO,String> {
-    UserEO findUserEOById(String id);
-    UserEO findByWxOpenid(String openid);
+    UserEO findUserEOByWxOpenid(String openid);
+
 }

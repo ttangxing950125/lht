@@ -11,7 +11,7 @@ import com.bth.lht.request.user.LoginRequest;
  **/
 public interface UserService {
 //    UserEO save(UserEO userEO);
-    UserEO findById(String id);
+    UserEO findByOpenid(String id);
 
     String save(LoginRequest loginRequest);
 }

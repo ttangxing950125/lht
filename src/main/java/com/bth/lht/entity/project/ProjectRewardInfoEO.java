@@ -2,6 +2,7 @@ package com.bth.lht.entity.project;
 
 import com.bth.lht.entity.BaseEntity;
 import com.bth.lht.enums.Enums;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -15,6 +16,8 @@ import java.math.BigDecimal;
  * @author: Antony
  * @create: 2018-12-21 19:27
  **/
+
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Data
 @Entity
 @Table(name = "tb_project_reward_info")

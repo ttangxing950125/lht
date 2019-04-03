@@ -15,4 +15,10 @@ import java.util.List;
  **/
 public interface MissionUserRepository extends JpaRepository<MissionUserEO,String> {
     List<MissionUserEO> findMissionUserEOSByUserEO(UserEO userEO);
+
+    MissionUserEO findMissionUserEOByUserEOAndMissionsEO(UserEO userEO,MissionsEO missionsEO);
+
+    List<MissionUserEO> findMissionUserEOSByMissionsEO(MissionsEO m);
+
+//    List<MissionUserEO> findMissionUserEOSByMissionEO(MissionsEO missionsEO);
 }

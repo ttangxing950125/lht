@@ -5,6 +5,7 @@ import com.bth.lht.entity.BaseEntity;
 import com.bth.lht.entity.team.TeamEO;
 import com.bth.lht.entity.user.UserEO;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.ToString;
 
@@ -21,6 +22,7 @@ import java.util.List;
  * @create: 2019-03-19 09:42
  **/
 
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Entity
 @Data
 @ToString(exclude = {"userEO","leaderEO","missionCommentEOS","missionUserEOS"})
@@ -99,7 +101,10 @@ public class MissionsEO extends BaseEntity implements Serializable {
         this.leaderEO = leaderEO;
     }
 
-
+    @JsonBackReference
+    public void setMissionUserEOS(List<MissionUserEO> missionUserEOS) {
+        this.missionUserEOS = missionUserEOS;
+    }
 
     @JsonBackReference
     public void setTeamEOList(List<TeamEO> teamEOList) {

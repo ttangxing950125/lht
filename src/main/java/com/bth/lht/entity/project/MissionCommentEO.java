@@ -1,6 +1,7 @@
 package com.bth.lht.entity.project;
 
 import com.bth.lht.entity.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -11,6 +12,8 @@ import javax.persistence.*;
  * @author: Antony
  * @create: 2019-04-01 17:11
  **/
+
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Data
 @Entity
 @Table(name = "tb_mission_comment")

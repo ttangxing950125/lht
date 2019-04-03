@@ -14,5 +14,5 @@ import java.util.List;
  * @create: 2019-03-19 10:04
  **/
 public interface MissionsRepository extends JpaRepository<MissionsEO,String> {
-    MissionsEO findMissionsEOByLeaderEO(UserEO userEO);
+    List<MissionsEO> findMissionsEOByLeaderEO(UserEO userEO);
 }
