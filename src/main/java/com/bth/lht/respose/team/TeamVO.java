@@ -26,9 +26,9 @@ public class TeamVO {
     private String level;
 
     public void setTeamDesc(String teamDesc) {
-//        if (teamDesc.length()>12){
-//            teamDesc = teamDesc.substring(0,12)+"...";
-//        }
+        if (teamDesc.length()>12){
+            teamDesc = teamDesc.substring(0,12)+"...";
+        }
         this.teamDesc = teamDesc;
     }
 }

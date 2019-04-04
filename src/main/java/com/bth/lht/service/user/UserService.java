@@ -3,6 +3,8 @@ package com.bth.lht.service.user;
 import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.request.user.LoginRequest;
 
+import java.util.List;
+
 /**
  * @program: lht
  * @description: service-用户
@@ -11,7 +13,7 @@ import com.bth.lht.request.user.LoginRequest;
  **/
 public interface UserService {
 //    UserEO save(UserEO userEO);
-    UserEO findByOpenid(String id);
+UserEO findByOpenid(String id);
 
     String save(LoginRequest loginRequest);
 }

@@ -2,8 +2,10 @@ package com.bth.lht.rest.missionController;
 
 import com.bth.lht.entity.project.MissionUserEO;
 import com.bth.lht.entity.project.MissionsEO;
+import com.bth.lht.entity.team.TeamEO;
 import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.request.mission.UpdateMissionUserRequest;
+import com.bth.lht.request.team.TeamJoinMissionRequest;
 import com.bth.lht.respose.base.BaseResponse;
 import com.bth.lht.respose.base.MultiResponse;
 import com.bth.lht.respose.base.OneResponse;
@@ -12,6 +14,7 @@ import com.bth.lht.respose.mission.MissionUserVO;
 import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.project.MissionUserService;
 import com.bth.lht.service.project.MissionsService;
+import com.bth.lht.service.team.TeamService;
 import com.bth.lht.service.user.UserService;
 import com.bth.lht.util.ModelMapperUtil;
 import com.bth.lht.util.TokenUtil;
@@ -42,16 +45,20 @@ public class MissionUserController extends BaseController {
     private UserService userService;
 
     @Autowired
+    private TeamService teamService;
+
+    @Autowired
     private MissionsService missionsService;
 
 
     /**
-     * 接受任务，重新添加任务，但leaderID不能修改，为任务加上用户openid或者团队id 多对多
+     * 个人身份-->接受任务，重新添加任务，但leaderID不能修改，为任务加上用户openid或者团队id 多对多
      * @return
      */
-    @PutMapping("join/{id}")
+    @PostMapping("joinByUser/{id}")
     @ApiOperation("接受任务")
-    public BaseResponse join(@PathVariable("id")String id, @RequestHeader("token")String token){
+    public OneResponse joinByUser(@PathVariable("id")String id, @RequestHeader("token")String token){
+        String res= "";
         MissionUserEO missionUserEO = new MissionUserEO();
         String openid = TokenUtil.getUserOpenidByToken(token);
 
@@ -59,22 +66,34 @@ public class MissionUserController extends BaseController {
         UserEO userEO = userService.findByOpenid(openid);
         //接收请求对象，并映射为实体
         MissionsEO missionsEO = missionsService.get(id);
+        MissionUserEO mu = missionUserService.findMissionUserEOByUserEOAndMissionsEO(userEO,missionsEO);
+        if (mu!=null){
+            res = "你已经领取该任务了，赶紧去领取其他任务吧";
+            return successOne(res);
+        }
+
         if (missionsEO!=null) {
             //接收任务的团队或者个人
             missionUserEO.setStatus("doing");
             missionUserEO.setMissionsEO(missionsEO);
             missionUserEO.setUserEO(userEO);
             missionUserService.save(missionUserEO);
+            res = "添加任务成功！！";
+
         }else {
             System.out.println("没找到任务");
+            res = "没找到任务！！";
+
         }
-        return new BaseResponse();
+        return successOne(res);
     }
 
-    /**
-     * 按类别查找查找任务 进行中 待审核 已完成 0 1 2
-     */
-    @GetMapping("listUserMission")
+
+
+        /**
+         * 按类别查找查找任务 进行中 待审核 已完成 0 1 2
+         */
+    @GetMapping("getUserMission")
     @ApiOperation("查找用户接受过的任务")
     public MultiResponse listMyMission(@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);

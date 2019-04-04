@@ -1,6 +1,7 @@
 package com.bth.lht.rest.teamController;
 
 import com.bth.lht.entity.team.TeamEO;
+import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.request.team.TeamRequest;
 import com.bth.lht.respose.base.BaseResponse;
 import com.bth.lht.respose.base.MultiResponse;
@@ -65,7 +66,6 @@ public class TeamController extends BaseController {
         String openid = TokenUtil.getUserOpenidByToken(token);
         TeamEO teamEO = teamService.getById(id);
         TeamVO teamVO = ModelMapperUtil.getStrictModelMapper().map(teamEO,TeamVO.class);
-
         return successOne(teamVO);
     }
 
@@ -77,6 +77,19 @@ public class TeamController extends BaseController {
         String openid = TokenUtil.getUserOpenidByToken(token);
         List<TeamEO> teamEOS = teamService.list();
         List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<TeamVO>>(){}.getType());
+        return successMulti(teamVOS);
+    }
+
+
+    /**
+     * 查询当前用户的团队
+     */
+    @GetMapping("listMyTeam")
+    public MultiResponse listMyTeam(@RequestHeader("token")String token){
+        String openid = TokenUtil.getUserOpenidByToken(token);
+        UserEO u = userService.findByOpenid(openid);
+        List<TeamEO> teamEOS = teamService.findByLeader(u);
+        List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<TeamEO>>(){}.getType());
         return successMulti(teamVOS);
     }
 }

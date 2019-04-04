@@ -25,7 +25,7 @@ import java.util.List;
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Entity
 @Data
-@ToString(exclude = {"userEO","leaderEO","missionCommentEOS","missionUserEOS"})
+@ToString(exclude = {"userEO","leaderEO","missionCommentEOS","missionUserEOS","missionTeamEOS"})
 @Table(name="tb_missions")
 public class MissionsEO extends BaseEntity implements Serializable {
     //任务标题
@@ -86,11 +86,13 @@ public class MissionsEO extends BaseEntity implements Serializable {
     @OneToMany(mappedBy = "missionsEO")
     private List<MissionUserEO> missionUserEOS;
 
-    //接收团队
-    @ManyToMany
-    @JoinTable(name = "tb_mission_team",joinColumns = {@JoinColumn(name = "mission_id",referencedColumnName = "id"),@JoinColumn(name="mission_title",referencedColumnName = "mission_title")},
-    inverseJoinColumns = {@JoinColumn(name = "team_id",referencedColumnName = "id"),@JoinColumn(name = "team_name",referencedColumnName = "team_name")})
-    private List<TeamEO> teamEOList;
+//    //接收团队
+//    @ManyToMany
+//    @JoinTable(name = "tb_mission_team",joinColumns = {@JoinColumn(name = "mission_id",referencedColumnName = "id"),@JoinColumn(name="mission_title",referencedColumnName = "mission_title")},
+//    inverseJoinColumns = {@JoinColumn(name = "team_id",referencedColumnName = "id"),@JoinColumn(name = "team_name",referencedColumnName = "team_name")})
+//    private List<TeamEO> teamEOList;
+    @OneToMany(mappedBy = "missionsEO")
+    private List<MissionTeamEO> missionTeamEOS;
 
     //评论
     @OneToMany(cascade = CascadeType.ALL,mappedBy ="missionsEO" )
@@ -105,12 +107,10 @@ public class MissionsEO extends BaseEntity implements Serializable {
     public void setMissionUserEOS(List<MissionUserEO> missionUserEOS) {
         this.missionUserEOS = missionUserEOS;
     }
-
     @JsonBackReference
-    public void setTeamEOList(List<TeamEO> teamEOList) {
-        this.teamEOList = teamEOList;
+    public void setMissionTeamEOS(List<MissionTeamEO> missionTeamEOS) {
+        this.missionTeamEOS = missionTeamEOS;
     }
-
 
     @JsonBackReference
     public void setMissionCommentEOS(List<MissionCommentEO> missionCommentEOS) {
