@@ -18,4 +18,6 @@ public interface TeamService {
     TeamEO getById(String id);
 
     List<TeamEO> list();
+
+    List<TeamEO> getByLevel(String level);
 }

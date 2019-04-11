@@ -5,6 +5,7 @@ import com.bth.lht.entity.BaseEntity;
 import com.bth.lht.entity.project.MissionUserEO;
 import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.team.TeamEO;
+import com.bth.lht.entity.team.TeamUserEO;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.ToString;
@@ -34,10 +35,15 @@ public class UserEO extends BaseEntity {
     @Column(name = "integral",nullable = false)
     private BigDecimal integral;
     @Column(name = "phoneNumber")
-    private Integer phoneNumber;
+    private String phoneNumber;
+
+
+
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_info_id")
     private UserInfoEO userInfoEO;
+
     @JSONField
     @OneToMany(mappedBy = "leaderEO",fetch = FetchType.LAZY)
     private List<MissionsEO> createMissionEOS;
@@ -47,18 +53,29 @@ public class UserEO extends BaseEntity {
     @OneToMany(mappedBy = "userEO")
     private List<MissionUserEO> missionUserEOS;
 
-    //团队
+    //领导者的团队
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<TeamEO> teamEOS;
+    private List<TeamEO> leaderTeamEOS;
+    //用户加入的团队
+    @OneToMany(mappedBy = "userEO")
+    private List<TeamUserEO> teamUserEOS;
+
 
     @JsonBackReference
     public void setMissionUserEOS(List<MissionUserEO> missionUserEOS) {
         this.missionUserEOS = missionUserEOS;
     }
     @JsonBackReference
-    public void setTeamEOS(List<TeamEO> teamEOS) {
-        this.teamEOS = teamEOS;
+    public void setLeaderTeamEOS(List<TeamEO> leaderTeamEOS) {
+        this.leaderTeamEOS = leaderTeamEOS;
     }
+    @JsonBackReference
+    public void setTeamUserEOS(List<TeamUserEO> teamUserEOS) {
+        this.teamUserEOS = teamUserEOS;
+    }
+
+
+
     @JsonBackReference
     public void setCreateMissionEOS(List<MissionsEO> createMissionEOS) {
         this.createMissionEOS = createMissionEOS;

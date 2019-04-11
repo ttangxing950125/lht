@@ -19,7 +19,7 @@ import java.util.List;
  **/
 
 @Data
-@ToString(exclude = {"setMissionTeamEOS"})
+@ToString(exclude = {"missionTeamEOS"})
 @Entity
 @Table(name = "tb_team")
 public class TeamEO extends BaseEntity {
@@ -44,11 +44,13 @@ public class TeamEO extends BaseEntity {
 
 
 
-
+    //团队与任务
     @OneToMany(mappedBy = "teamEO")
     private List<MissionTeamEO> missionTeamEOS;
-
-    //团队队长与团队用户 多对一
+    //团队与队员
+    @OneToMany(mappedBy = "teamEO")
+    List<TeamUserEO> teamUserEOS;
+    //团队队长与团队 多对一
     @ManyToOne(cascade = CascadeType.REFRESH,fetch = FetchType.LAZY)
     @JoinColumn(name = "user_openid",referencedColumnName = "wx_openid")
     private UserEO userEO;
@@ -56,5 +58,10 @@ public class TeamEO extends BaseEntity {
     @JsonBackReference
     public void setMissionTeamEOS(List<MissionTeamEO> missionTeamEOS) {
         this.missionTeamEOS = missionTeamEOS;
+    }
+
+    @JsonBackReference
+    public void setTeamUserEOS(List<TeamUserEO> teamUserEOS) {
+        this.teamUserEOS = teamUserEOS;
     }
 }

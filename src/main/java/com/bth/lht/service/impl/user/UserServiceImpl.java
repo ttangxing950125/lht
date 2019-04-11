@@ -29,6 +29,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public String save(LoginRequest loginRequest) {
         WxUserKeyVO sessionKeyOrOpenid = wxAppletService.getSessionKeyOrOpenid(loginRequest.getCode());
+
         UserEO userEO = userRepository.findUserEOByWxOpenid(sessionKeyOrOpenid.getOpenid());
         System.out.println(userEO.toString());
         if ( userEO != null){
@@ -43,7 +44,7 @@ public class UserServiceImpl implements UserService {
             userEO.setAvatarUrl(loginRequest.getUserRequest().getAvatarUrl());
             userEO.setIntegral(new BigDecimal("1000"));
         }
-        userRepository.save(userEO);;
+        userRepository.save(userEO);
         return TokenUtil.createToken(sessionKeyOrOpenid.getOpenid());
     }
 

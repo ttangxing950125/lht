@@ -71,6 +71,10 @@ public class MissionsEO extends BaseEntity implements Serializable {
     @Column(name = "mission_level",nullable = true)
     private int missionLevel;
 
+    //任务父级
+    @Column(name = "parent_id",nullable = true)
+    private String parentId;
+
     //发起人
     @JSONField(serialize = false)
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER,optional = false)

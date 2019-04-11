@@ -19,6 +19,7 @@ import org.modelmapper.TypeToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import sun.rmi.runtime.Log;
@@ -42,15 +43,27 @@ public class TeamController extends BaseController {
 
     Logger log = LoggerFactory.getLogger(this.getClass());
 
-
+    /**
+     *  用户添加团队
+     * @param teamRequest
+     * @param token
+     * @return
+     */
     @PostMapping("add")
     public BaseResponse add(@RequestBody @Validated TeamRequest teamRequest,@RequestHeader("token")String token){
+
         String openid = TokenUtil.getUserOpenidByToken(token);
+
         TeamEO teamEO = ModelMapperUtil.getStrictModelMapper().map(teamRequest,TeamEO.class);
+
         //队长
         teamEO.setUserEO(userService.findByOpenid(openid));
+
+
         //等级
         teamEO.setLevel("0");
+
+
         System.out.println(teamEO.toString());
             log.info("[openid]开始创建团队",openid);
             teamService.addTeam(teamEO);
@@ -59,12 +72,21 @@ public class TeamController extends BaseController {
 
     }
 
-
+    /**
+     *
+     * @param token
+     * @param id
+     * @return
+     */
 
     @GetMapping("get/{id}")
     public OneResponse add(@RequestHeader("token")String token,@PathVariable("id")String id){
+
         String openid = TokenUtil.getUserOpenidByToken(token);
+
         TeamEO teamEO = teamService.getById(id);
+
+
         TeamVO teamVO = ModelMapperUtil.getStrictModelMapper().map(teamEO,TeamVO.class);
         return successOne(teamVO);
     }
@@ -76,7 +98,9 @@ public class TeamController extends BaseController {
     public MultiResponse list(@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);
         List<TeamEO> teamEOS = teamService.list();
+
         List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<TeamVO>>(){}.getType());
+
         return successMulti(teamVOS);
     }
 
@@ -87,8 +111,25 @@ public class TeamController extends BaseController {
     @GetMapping("listMyTeam")
     public MultiResponse listMyTeam(@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);
+
         UserEO u = userService.findByOpenid(openid);
+
         List<TeamEO> teamEOS = teamService.findByLeader(u);
+
+
+        List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<TeamEO>>(){}.getType());
+
+
+        return successMulti(teamVOS);
+    }
+
+    /**
+     * 查询热门团队
+     */
+    @GetMapping("getHotTeam")
+    public MultiResponse getHotTeam(@RequestHeader("token")String token){
+        String openid = TokenUtil.getUserOpenidByToken(token);
+        List<TeamEO> teamEOS = teamService.getByLevel("4");
         List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<TeamEO>>(){}.getType());
         return successMulti(teamVOS);
     }

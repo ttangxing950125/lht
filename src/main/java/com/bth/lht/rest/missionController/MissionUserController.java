@@ -61,17 +61,19 @@ public class MissionUserController extends BaseController {
         String res= "";
         MissionUserEO missionUserEO = new MissionUserEO();
         String openid = TokenUtil.getUserOpenidByToken(token);
-
         //得到该用户
         UserEO userEO = userService.findByOpenid(openid);
         //接收请求对象，并映射为实体
         MissionsEO missionsEO = missionsService.get(id);
+        if (missionsEO.getLeaderEO().equals(userEO)){
+            res = "不可以领取自己发布的任务哟";
+            return successOne(res);
+        }
         MissionUserEO mu = missionUserService.findMissionUserEOByUserEOAndMissionsEO(userEO,missionsEO);
         if (mu!=null){
             res = "你已经领取该任务了，赶紧去领取其他任务吧";
             return successOne(res);
         }
-
         if (missionsEO!=null) {
             //接收任务的团队或者个人
             missionUserEO.setStatus("doing");
@@ -157,5 +159,8 @@ public class MissionUserController extends BaseController {
         List<MissionUserVO> missionUserVOS = ModelMapperUtil.getStrictModelMapper().map(missionUserEOS,new TypeToken<List<MissionUserVO>>(){}.getType());
         return successMulti(missionUserVOS);
     }
+
+
+
 
 }

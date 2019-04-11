@@ -9,6 +9,7 @@ import com.bth.lht.request.mission.MissionRequest;
 import com.bth.lht.respose.base.BaseResponse;
 import com.bth.lht.respose.base.MultiResponse;
 import com.bth.lht.respose.base.OneResponse;
+import com.bth.lht.respose.mission.IsMineMissionVO;
 import com.bth.lht.respose.mission.MissionUserVO;
 import com.bth.lht.respose.mission.MissionVO;
 import com.bth.lht.rest.baseController.BaseController;
@@ -42,17 +43,14 @@ import java.util.List;
 @Api("任务接口")
 @Slf4j
 public class MissionController extends BaseController {
-
     @Autowired
     private UserRepository userRepository;
     @Autowired
     private UserService userService;
     @Autowired
     private MissionUserService missionUserService;
-
     @Autowired
     private MissionsService missionsService;
-
     @GetMapping("list")
     @ApiOperation("查找所有任务")
     public MultiResponse list(@RequestHeader("token")String token){
@@ -62,7 +60,6 @@ public class MissionController extends BaseController {
         List<MissionVO> missionVOList = ModelMapperUtil.getStrictModelMapper().map(list,new TypeToken< List<MissionVO>>(){}.getType());
         return successMulti(missionVOList);
     }
-
     @GetMapping("listPublish")
     @ApiOperation("查找指定用户发布的任务")
     public MultiResponse listPublish(@RequestHeader("token")String token){
@@ -71,7 +68,6 @@ public class MissionController extends BaseController {
         List<MissionVO> missionVOList = ModelMapperUtil.getStrictModelMapper().map(list,new TypeToken< List<MissionVO>>(){}.getType());
         return successMulti(missionVOList);
     }
-
     /**
      *
      * 添加任务操作，注：为任务添加leaderId
@@ -79,31 +75,35 @@ public class MissionController extends BaseController {
      * @param token
      * @return
      */
-    @PutMapping("add")
+    @PostMapping("add")
     @ApiOperation("添加任务")
     public OneResponse<MissionsEO> add(@Validated @RequestBody MissionRequest missionRequest,@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);
         MissionsEO missionsEO = ModelMapperUtil.getStrictModelMapper().map(missionRequest,MissionsEO.class);
         missionsEO.setLeaderEO(userRepository.findUserEOByWxOpenid(openid));
+        //初始化父级任务
+        missionsEO.setParentId("0");
         log.info("开始添加任务");
         missionsService.save(missionsEO);
         log.info("结束添加任务");
         return successOne(missionsEO);
     }
-
-
-
     /**
      * 拆分任务，注：拆分任务逻辑：重新添加该任务，需要修改其leaderID,并修改其任务等级
      * @return
      */
-
     @ApiOperation("拆分任务")
-    @PostMapping("split")
-    public BaseResponse split(){
+    @PostMapping("split/{parentId}")
+    public BaseResponse split(@Validated @RequestBody MissionRequest missionRequest,@PathVariable("parentId")String parentId,@RequestHeader("token")String token){
+        String openid = TokenUtil.getUserOpenidByToken(token);
+        MissionsEO missionsEO = ModelMapperUtil.getStrictModelMapper().map(missionRequest,MissionsEO.class);
+        //设置领导人id
+        missionsEO.setLeaderEO(userRepository.findUserEOByWxOpenid(openid));
+        //设置父任务id
+        missionsEO.setParentId(parentId);
+        missionsService.save(missionsEO);
         return new BaseResponse();
     }
-
     /**
      * 提交任务 注：任务任意字段改变都可称为修改任务
      */
@@ -113,6 +113,34 @@ public class MissionController extends BaseController {
         return new BaseResponse();
     }
 
+    /**
+     * 判断是不是用户自己发布的任务
+     */
+    @ApiOperation("判断是不是用户自己的任务")
+    @GetMapping("isMineMission/{missionId}")
+    public OneResponse isMineMission(@RequestHeader("token")String token,@PathVariable("missionId")String missionId){
+        UserEO userEO = userService.findByOpenid(TokenUtil.getUserOpenidByToken(token));
+        MissionsEO missionsEO = missionsService.get(missionId);
+        IsMineMissionVO isMineMissionVO = new IsMineMissionVO();
+        if (missionsEO.getLeaderEO().equals(userEO)){
+            isMineMissionVO.setMine(true);
+        }
+        MissionUserEO missionUserEO = missionUserService.findMissionUserEOByUserEOAndMissionsEO(userEO,missionsEO);
+        if (missionUserEO!=null){
+            isMineMissionVO.setReceived(true);
+        }
 
+        return successOne(isMineMissionVO);
+    }
 
+    /**
+     * 通过id查找任务
+     */
+    @ApiOperation("通过id查找任务")
+    @GetMapping("get/{id}")
+    public OneResponse getById(@PathVariable("id")String id,@RequestHeader("token")String token){
+        MissionsEO m = missionsService.get(id);
+        MissionVO missionVO = ModelMapperUtil.getStrictModelMapper().map(m,MissionVO.class);
+        return successOne(missionVO);
+    }
 }

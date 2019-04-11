@@ -25,6 +25,8 @@ public class TeamVO {
     //团队等级
     private String level;
 
+
+
     public void setTeamDesc(String teamDesc) {
         if (teamDesc.length()>12){
             teamDesc = teamDesc.substring(0,12)+"...";

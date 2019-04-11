@@ -6,9 +6,9 @@ wx-applet:
 
 #==================== Tomcat Setting =====================#
 http:
-  port: 80
+  port: 8080
 server:
-  port: 443
+  port: 80
   ssl:
     key-store: cert-1542771005276_antony0127.cn.pfx
     key-store-password: 1P4u9dwU
