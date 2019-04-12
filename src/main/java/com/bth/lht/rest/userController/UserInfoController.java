@@ -27,9 +27,9 @@ public class UserInfoController extends BaseController {
 
     @PostMapping("save")
     public OneResponse<UserInfoEO> save(@Validated @RequestBody UserInfoEO userInfoEO){
-        System.out.println(userInfoEO.getCreateDate());
+       
 
-       UserInfoEO u = userInfoService.save(userInfoEO);
-        return  successOne(u);
+
+        return  successOne(userInfoService.save(userInfoEO));
     }
 }

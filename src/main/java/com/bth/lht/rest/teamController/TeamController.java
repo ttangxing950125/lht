@@ -133,4 +133,9 @@ public class TeamController extends BaseController {
         List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<TeamEO>>(){}.getType());
         return successMulti(teamVOS);
     }
+
+    public MultiResponse listHotTeam(@RequestHeader("token")String token){
+        List<TeamEO> teamEOS = teamService.list();
+        return successMulti(teamEOS);
+    }
 }

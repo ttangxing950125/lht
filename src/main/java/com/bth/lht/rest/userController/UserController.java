@@ -50,15 +50,16 @@ public class UserController extends BaseController {
     @PostMapping("/login")
     public OneResponse<TokenVO> login(@Validated @RequestBody LoginRequest loginRequest){
         TokenVO tokenVO = new TokenVO();
-
+        System.out.println(loginRequest);
+        System.out.println(successOne(tokenVO).getDesc()+"123456");
         //返回token
         String token = userService.save(loginRequest);
-
-
         tokenVO.setToken(token);
         tokenVO.setOpenid(TokenUtil.getUserOpenidByToken(token));
+
         return successOne(tokenVO);
     }
+
 
 
     //测试

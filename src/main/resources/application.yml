@@ -1,7 +1,7 @@
 #==================== wx-args setting ====================#
 wx-applet:
-  appid: wx394581d5f7b79fee
-  secret: f75981a1c33758c81803ce478f6cab28
+  appid: wx1304ae22d2c0112a
+  secret: 6bab0148238f07c3f6bb8d8b488e2306
   grant_type: authorization_code
 
 #==================== Tomcat Setting =====================#
@@ -14,6 +14,7 @@ server:
     key-store-password: 1P4u9dwU
   tomcat:
     uri-encoding: UTF-8
+
 
 #==================== logging Setting =====================#
 logging:
@@ -42,11 +43,12 @@ spring:
   datasource:
     driver-Class-Name: com.mysql.cj.jdbc.Driver
     username: root
-    password: antony
+    password: root
     url: jdbc:mysql://127.0.0.1:3306/db_lht?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
 
-
+#server:
+#  port: 80

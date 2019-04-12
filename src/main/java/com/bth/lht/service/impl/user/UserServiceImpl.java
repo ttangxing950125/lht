@@ -31,7 +31,6 @@ public class UserServiceImpl implements UserService {
         WxUserKeyVO sessionKeyOrOpenid = wxAppletService.getSessionKeyOrOpenid(loginRequest.getCode());
 
         UserEO userEO = userRepository.findUserEOByWxOpenid(sessionKeyOrOpenid.getOpenid());
-        System.out.println(userEO.toString());
         if ( userEO != null){
             userEO.setWxOpenid(sessionKeyOrOpenid.getOpenid());
             userEO.setWxNickName(loginRequest.getUserRequest().getNickName());
