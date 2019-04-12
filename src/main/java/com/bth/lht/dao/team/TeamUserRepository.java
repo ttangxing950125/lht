@@ -22,4 +22,8 @@ public interface TeamUserRepository extends JpaRepository<TeamUserEO,String> {
     //通过用户以及审核状态查找记录
     TeamUserEO findTeamUserEOByUserEOAndStatus(UserEO userEO,String status);
 
+
+    //通过状态查找用户自己加入的团队
+    List<TeamUserEO> findTeamUserEOSByUserEOAndStatus(UserEO userEO,String status);
+
 }

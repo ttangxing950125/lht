@@ -5,12 +5,15 @@ import com.bth.lht.entity.team.TeamUserEO;
 import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.respose.base.MultiResponse;
 import com.bth.lht.respose.base.OneResponse;
+import com.bth.lht.respose.team.TeamUserVO;
 import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.TeamUserService;
 import com.bth.lht.service.team.TeamService;
 import com.bth.lht.service.user.UserService;
+import com.bth.lht.util.ModelMapperUtil;
 import com.bth.lht.util.TokenUtil;
 import io.swagger.annotations.Api;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,9 +63,24 @@ public class TeamUserController extends BaseController {
 
     }
 
+
+
     /**
-     *
+     * 查找用户审核中的团队
      */
+    @GetMapping("getUserTeamByStatus/{status}")
+    public  MultiResponse getUserTeamByStatus(@RequestHeader("token")String token,@PathVariable("status")String status){
+        String openid = TokenUtil.getUserOpenidByToken("token");
+        UserEO userEO = userService.findByOpenid(openid);
+
+
+        List<TeamUserEO> list = teamUserService.getByUserEOAndStatus(userEO,status);
+
+        List<TeamUserVO> result = ModelMapperUtil.getStrictModelMapper().map(list,new TypeToken<List<TeamUserVO>>(){}.getType());
+        return successMulti(result);
+
+
+    }
 
 
 }

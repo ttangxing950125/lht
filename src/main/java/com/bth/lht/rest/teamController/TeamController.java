@@ -12,6 +12,7 @@ import com.bth.lht.service.team.TeamService;
 import com.bth.lht.service.user.UserService;
 import com.bth.lht.util.ModelMapperUtil;
 import com.bth.lht.util.TokenUtil;
+import com.google.common.base.Strings;
 import io.swagger.annotations.Api;
 import jdk.nashorn.internal.parser.Token;
 import lombok.extern.slf4j.Slf4j;
@@ -132,5 +133,12 @@ public class TeamController extends BaseController {
         List<TeamEO> teamEOS = teamService.getByLevel("4");
         List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<TeamEO>>(){}.getType());
         return successMulti(teamVOS);
+    }
+
+
+
+    public static void main(Strings[] arg){
+
+
     }
 }

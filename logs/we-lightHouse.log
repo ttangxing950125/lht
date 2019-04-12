@@ -553,3 +553,575 @@
 2019-04-12 09:12:51.538  INFO 5580 --- [https-jsse-nio-80-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
 2019-04-12 09:12:51.863  INFO 5580 --- [https-jsse-nio-80-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
 2019-04-12 09:12:56.940  INFO 5580 --- [https-jsse-nio-80-exec-5] c.b.l.r.m.MissionController              : 用户【{openid}】请求
+2019-04-12 09:52:59.548  INFO 4072 --- [main] com.bth.lht.LhtApplication               : Starting LhtApplication on DESKTOP-S54C630 with PID 4072 (C:\Users\Antony\IdeaProjects\lht\target\classes started by Antony in C:\Users\Antony\IdeaProjects\lht)
+2019-04-12 09:52:59.555  INFO 4072 --- [main] com.bth.lht.LhtApplication               : No active profile set, falling back to default profiles: default
+2019-04-12 09:53:01.808  INFO 4072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-12 09:53:02.099  INFO 4072 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 278ms. Found 9 repository interfaces.
+2019-04-12 09:53:02.676  INFO 4072 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$48702b16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-12 09:53:02.846  INFO 4072 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$c7f07848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-12 09:53:03.358  INFO 4072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (https) 8080 (http)
+2019-04-12 09:53:03.404  INFO 4072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-12 09:53:03.405  INFO 4072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2019-04-12 09:53:03.411  INFO 4072 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\JAVA\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;G:\JAVA\jdk1.8.0_101\bin;G:\JAVA\jdk1.8.0_101\jre\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\MySQL\MySQL Server 5.6\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;G:\apache-maven-3.5.2\bin;G:\Python\Python37;G:\Python\Python37\Scripts;G:\Program Files\nodejs\;G:\Program Files\Microsoft VS Code\bin;G:\Program Files\Geth;G:\Program Files\Git\cmd;G:\Program Files\TortoiseSVN\bin;G:\Python\Python37\Scripts\;G:\Python\Python37\;G:\Bandizip;G:\AppData\Local\Android\sdk\platform-tools;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;C:\Users\Antony\AppData\Local\Microsoft\WindowsApps;G:\Program Files\Fiddler;G:\Program Files\Git\cmd;G:\gradle-4.9\bin;G:\Redis-x64-3.2.100;C:\Users\Antony\AppData\Roaming\npm;.]
+2019-04-12 09:53:03.741  INFO 4072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-04-12 09:53:03.742  INFO 4072 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3989 ms
+2019-04-12 09:53:04.102  INFO 4072 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-12 09:53:04.200  INFO 4072 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-12 09:53:04.204  INFO 4072 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-12 09:53:04.455  INFO 4072 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-12 09:53:04.749  INFO 4072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-12 09:53:04.913  INFO 4072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-12 09:53:04.930  INFO 4072 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-12 09:53:05.333  WARN 4072 --- [main] org.hibernate.id.UUIDHexGenerator        : HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+2019-04-12 09:53:07.755  INFO 4072 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-12 09:53:08.887  WARN 4072 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-12 09:53:09.315  INFO 4072 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-12 09:53:09.942  INFO 4072 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-04-12 09:53:09.968  INFO 4072 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found {0} custom documentation plugin(s)
+2019-04-12 09:53:09.981  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-04-12 09:53:09.988  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was 任务评论接口
+2019-04-12 09:53:09.992  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: delete belongs to groups: [[ResourceGroup{groupName='任务评论接口', position=0, controller=com.bth.lht.rest.missionController.MissionCommentController}]] 
+2019-04-12 09:53:09.994  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 任务评论接口
+2019-04-12 09:53:09.995  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: list belongs to groups: [[ResourceGroup{groupName='任务评论接口', position=0, controller=com.bth.lht.rest.missionController.MissionCommentController}]] 
+2019-04-12 09:53:09.995  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was 任务评论接口
+2019-04-12 09:53:09.995  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: save belongs to groups: [[ResourceGroup{groupName='任务评论接口', position=0, controller=com.bth.lht.rest.missionController.MissionCommentController}]] 
+2019-04-12 09:53:09.996  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listTeamMission was 团队接收任务接口
+2019-04-12 09:53:09.996  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listTeamMission belongs to groups: [[ResourceGroup{groupName='团队接收任务接口', position=0, controller=com.bth.lht.rest.missionController.missionTeamController}]] 
+2019-04-12 09:53:09.996  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队接收任务接口
+2019-04-12 09:53:09.996  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: add belongs to groups: [[ResourceGroup{groupName='团队接收任务接口', position=0, controller=com.bth.lht.rest.missionController.missionTeamController}]] 
+2019-04-12 09:53:09.997  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByMission was 用户所接受的任务相关接口
+2019-04-12 09:53:09.997  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getByMission belongs to groups: [[ResourceGroup{groupName='用户所接受的任务相关接口', position=0, controller=com.bth.lht.rest.missionController.MissionUserController}]] 
+2019-04-12 09:53:09.997  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was 用户所接受的任务相关接口
+2019-04-12 09:53:09.997  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: get belongs to groups: [[ResourceGroup{groupName='用户所接受的任务相关接口', position=0, controller=com.bth.lht.rest.missionController.MissionUserController}]] 
+2019-04-12 09:53:09.997  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listMyMission was 用户所接受的任务相关接口
+2019-04-12 09:53:09.997  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listMyMission belongs to groups: [[ResourceGroup{groupName='用户所接受的任务相关接口', position=0, controller=com.bth.lht.rest.missionController.MissionUserController}]] 
+2019-04-12 09:53:09.998  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method joinByUser was 用户所接受的任务相关接口
+2019-04-12 09:53:09.998  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: joinByUser belongs to groups: [[ResourceGroup{groupName='用户所接受的任务相关接口', position=0, controller=com.bth.lht.rest.missionController.MissionUserController}]] 
+2019-04-12 09:53:09.999  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 用户所接受的任务相关接口
+2019-04-12 09:53:09.999  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: list belongs to groups: [[ResourceGroup{groupName='用户所接受的任务相关接口', position=0, controller=com.bth.lht.rest.missionController.MissionUserController}]] 
+2019-04-12 09:53:09.999  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 用户所接受的任务相关接口
+2019-04-12 09:53:09.999  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='用户所接受的任务相关接口', position=0, controller=com.bth.lht.rest.missionController.MissionUserController}]] 
+2019-04-12 09:53:10.000  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 任务接口
+2019-04-12 09:53:10.000  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: add belongs to groups: [[ResourceGroup{groupName='任务接口', position=0, controller=com.bth.lht.rest.missionController.MissionController}]] 
+2019-04-12 09:53:10.001  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getById was 任务接口
+2019-04-12 09:53:10.001  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getById belongs to groups: [[ResourceGroup{groupName='任务接口', position=0, controller=com.bth.lht.rest.missionController.MissionController}]] 
+2019-04-12 09:53:10.001  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method isMineMission was 任务接口
+2019-04-12 09:53:10.001  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: isMineMission belongs to groups: [[ResourceGroup{groupName='任务接口', position=0, controller=com.bth.lht.rest.missionController.MissionController}]] 
+2019-04-12 09:53:10.002  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listPublish was 任务接口
+2019-04-12 09:53:10.002  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listPublish belongs to groups: [[ResourceGroup{groupName='任务接口', position=0, controller=com.bth.lht.rest.missionController.MissionController}]] 
+2019-04-12 09:53:10.002  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 任务接口
+2019-04-12 09:53:10.003  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: list belongs to groups: [[ResourceGroup{groupName='任务接口', position=0, controller=com.bth.lht.rest.missionController.MissionController}]] 
+2019-04-12 09:53:10.003  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method split was 任务接口
+2019-04-12 09:53:10.003  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: split belongs to groups: [[ResourceGroup{groupName='任务接口', position=0, controller=com.bth.lht.rest.missionController.MissionController}]] 
+2019-04-12 09:53:10.004  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 任务接口
+2019-04-12 09:53:10.004  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: update belongs to groups: [[ResourceGroup{groupName='任务接口', position=0, controller=com.bth.lht.rest.missionController.MissionController}]] 
+2019-04-12 09:53:10.004  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队相关接口
+2019-04-12 09:53:10.004  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: add belongs to groups: [[ResourceGroup{groupName='团队相关接口', position=0, controller=com.bth.lht.rest.teamController.TeamController}]] 
+2019-04-12 09:53:10.005  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队相关接口
+2019-04-12 09:53:10.005  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: add belongs to groups: [[ResourceGroup{groupName='团队相关接口', position=0, controller=com.bth.lht.rest.teamController.TeamController}]] 
+2019-04-12 09:53:10.006  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getHotTeam was 团队相关接口
+2019-04-12 09:53:10.006  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getHotTeam belongs to groups: [[ResourceGroup{groupName='团队相关接口', position=0, controller=com.bth.lht.rest.teamController.TeamController}]] 
+2019-04-12 09:53:10.006  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listMyTeam was 团队相关接口
+2019-04-12 09:53:10.006  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: listMyTeam belongs to groups: [[ResourceGroup{groupName='团队相关接口', position=0, controller=com.bth.lht.rest.teamController.TeamController}]] 
+2019-04-12 09:53:10.006  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 团队相关接口
+2019-04-12 09:53:10.007  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: list belongs to groups: [[ResourceGroup{groupName='团队相关接口', position=0, controller=com.bth.lht.rest.teamController.TeamController}]] 
+2019-04-12 09:53:10.007  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserTeam was 用户加入团队接口
+2019-04-12 09:53:10.007  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: getUserTeam belongs to groups: [[ResourceGroup{groupName='用户加入团队接口', position=0, controller=com.bth.lht.rest.teamController.TeamUserController}]] 
+2019-04-12 09:53:10.008  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method userJoinTeam was 用户加入团队接口
+2019-04-12 09:53:10.008  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: userJoinTeam belongs to groups: [[ResourceGroup{groupName='用户加入团队接口', position=0, controller=com.bth.lht.rest.teamController.TeamUserController}]] 
+2019-04-12 09:53:10.008  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method login was 用户接口
+2019-04-12 09:53:10.008  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: login belongs to groups: [[ResourceGroup{groupName='用户接口', position=0, controller=com.bth.lht.rest.userController.UserController}]] 
+2019-04-12 09:53:10.008  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reward was 用户接口
+2019-04-12 09:53:10.009  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: reward belongs to groups: [[ResourceGroup{groupName='用户接口', position=0, controller=com.bth.lht.rest.userController.UserController}]] 
+2019-04-12 09:53:10.009  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was user-info-controller
+2019-04-12 09:53:10.009  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Request mapping: save belongs to groups: [[ResourceGroup{groupName='user-info-controller', position=0, controller=com.bth.lht.rest.userController.UserInfoController}]] 
+2019-04-12 09:53:10.015  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/用户所接受的任务相关接口 Description: 用户所接受的任务相关接口 Position: 0
+2019-04-12 09:53:10.017  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/任务接口 Description: 任务接口 Position: 0
+2019-04-12 09:53:10.017  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/用户加入团队接口 Description: 用户加入团队接口 Position: 0
+2019-04-12 09:53:10.018  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/用户接口 Description: 用户接口 Position: 0
+2019-04-12 09:53:10.018  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/团队相关接口 Description: 团队相关接口 Position: 0
+2019-04-12 09:53:10.018  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/user-info-controller Description: user-info-controller Position: 0
+2019-04-12 09:53:10.018  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/任务评论接口 Description: 任务评论接口 Position: 0
+2019-04-12 09:53:10.018  INFO 4072 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Created resource listing Path: /default/团队接收任务接口 Description: 团队接收任务接口 Position: 0
+2019-04-12 09:53:10.045  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.045  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.053  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.053  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.111  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.111  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.114  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.115  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(false)
+2019-04-12 09:53:10.116  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(false)
+2019-04-12 09:53:10.116  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(false)
+2019-04-12 09:53:10.125  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(false)
+2019-04-12 09:53:10.126  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(false)
+2019-04-12 09:53:10.134  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(false)
+2019-04-12 09:53:10.134  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(false)
+2019-04-12 09:53:10.137  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(false)
+2019-04-12 09:53:10.137  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(false)
+2019-04-12 09:53:10.140  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(false)
+2019-04-12 09:53:10.140  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(false)
+2019-04-12 09:53:10.143  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.143  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.145  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(false)
+2019-04-12 09:53:10.145  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(false)
+2019-04-12 09:53:10.148  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(false)
+2019-04-12 09:53:10.148  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(false)
+2019-04-12 09:53:10.148  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(false)
+2019-04-12 09:53:10.149  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(false)
+2019-04-12 09:53:10.149  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(false)
+2019-04-12 09:53:10.149  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(false)
+2019-04-12 09:53:10.151  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.152  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.156  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.156  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.163  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(false)
+2019-04-12 09:53:10.163  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(false)
+2019-04-12 09:53:10.165  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(false)
+2019-04-12 09:53:10.166  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(false)
+2019-04-12 09:53:10.169  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(false)
+2019-04-12 09:53:10.169  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(false)
+2019-04-12 09:53:10.171  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(false)
+2019-04-12 09:53:10.171  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(false)
+2019-04-12 09:53:10.175  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(false)
+2019-04-12 09:53:10.175  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(false)
+2019-04-12 09:53:10.178  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.178  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(false)
+2019-04-12 09:53:10.180  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(false)
+2019-04-12 09:53:10.181  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(false)
+2019-04-12 09:53:10.182  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.184  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.184  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.185  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.189  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.189  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.190  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(true)
+2019-04-12 09:53:10.190  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(true)
+2019-04-12 09:53:10.192  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(true)
+2019-04-12 09:53:10.193  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(true)
+2019-04-12 09:53:10.202  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.202  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.207  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.208  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.209  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.209  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.212  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.212  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.218  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.218  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.220  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.220  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.222  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.222  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.222  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.222  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.222  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.223  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.223  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.223  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.224  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.224  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.224  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.224  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.user.UserInfoEO>(true)
+2019-04-12 09:53:10.224  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(true)
+2019-04-12 09:53:10.225  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(true)
+2019-04-12 09:53:10.225  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(true)
+2019-04-12 09:53:10.225  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(true)
+2019-04-12 09:53:10.226  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.226  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.226  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.227  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.227  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.227  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.227  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.227  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.228  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.228  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.228  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.228  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.228  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.228  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.229  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.229  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.229  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.229  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.230  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.230  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.230  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.231  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.234  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserInfoEO(true)
+2019-04-12 09:53:10.235  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserInfoEO(true)
+2019-04-12 09:53:10.235  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.user.UserEO(true)
+2019-04-12 09:53:10.236  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.user.UserEO(true)
+2019-04-12 09:53:10.237  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.237  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.237  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.238  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.239  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.239  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.240  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.241  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.242  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.242  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.244  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.247  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.252  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /userInfo/save.com.bth.lht.rest.userController.UserInfoController.save.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.252  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /userInfo/save.com.bth.lht.rest.userController.UserInfoController.save.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.288  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was user-info-controller
+2019-04-12 09:53:10.293  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was user-info-controller
+2019-04-12 09:53:10.332  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.332  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.332  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.332  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.347  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.349  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.349  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.349  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.349  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.349  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.349  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.350  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.350  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.350  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.350  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.351  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.351  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.351  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.351  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.352  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.352  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.entity.project.MissionsEO>(true)
+2019-04-12 09:53:10.352  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.352  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.353  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.353  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.353  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.353  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.353  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.353  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.354  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.354  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.355  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.359  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.372  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.372  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionsEO(true)
+2019-04-12 09:53:10.373  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.373  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionUserEO(true)
+2019-04-12 09:53:10.373  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.373  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionTeamEO(true)
+2019-04-12 09:53:10.374  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.374  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamEO(true)
+2019-04-12 09:53:10.374  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.374  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.team.TeamUserEO(true)
+2019-04-12 09:53:10.375  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.375  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.entity.project.MissionCommentEO(true)
+2019-04-12 09:53:10.375  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missions/add.com.bth.lht.rest.missionController.MissionController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.375  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missions/add.com.bth.lht.rest.missionController.MissionController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.382  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 任务接口
+2019-04-12 09:53:10.385  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 任务接口
+2019-04-12 09:53:10.391  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.391  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.391  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.391  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.393  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.394  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.394  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.394  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.395  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missions/get/{id}.com.bth.lht.rest.missionController.MissionController.getById.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.395  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missions/get/{id}.com.bth.lht.rest.missionController.MissionController.getById.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.401  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getById was 任务接口
+2019-04-12 09:53:10.403  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getById was 任务接口
+2019-04-12 09:53:10.406  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.406  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.406  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.406  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.406  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missions/isMineMission/{missionId}.com.bth.lht.rest.missionController.MissionController.isMineMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.406  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missions/isMineMission/{missionId}.com.bth.lht.rest.missionController.MissionController.isMineMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.411  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method isMineMission was 任务接口
+2019-04-12 09:53:10.414  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method isMineMission was 任务接口
+2019-04-12 09:53:10.419  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.419  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.420  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.420  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.423  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.423  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.424  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.424  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.424  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missions/list.com.bth.lht.rest.missionController.MissionController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.424  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missions/list.com.bth.lht.rest.missionController.MissionController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.427  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 任务接口
+2019-04-12 09:53:10.431  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 任务接口
+2019-04-12 09:53:10.435  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.435  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.436  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.436  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.437  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missions/listPublish.com.bth.lht.rest.missionController.MissionController.listPublish.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.437  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missions/listPublish.com.bth.lht.rest.missionController.MissionController.listPublish.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.439  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listPublish was 任务接口
+2019-04-12 09:53:10.442  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listPublish was 任务接口
+2019-04-12 09:53:10.445  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.445  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.445  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.445  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.446  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.446  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.446  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.446  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.446  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.446  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.447  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.447  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.mission.MissionRequest(false)
+2019-04-12 09:53:10.447  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missions/split/{parentId}.com.bth.lht.rest.missionController.MissionController.split.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.447  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missions/split/{parentId}.com.bth.lht.rest.missionController.MissionController.split.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.452  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method split was 任务接口
+2019-04-12 09:53:10.453  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method split was 任务接口
+2019-04-12 09:53:10.455  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.455  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.456  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.456  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.456  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missions/update.com.bth.lht.rest.missionController.MissionController.update.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.456  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missions/update.com.bth.lht.rest.missionController.MissionController.update.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.456  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 任务接口
+2019-04-12 09:53:10.458  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 任务接口
+2019-04-12 09:53:10.460  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.460  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.460  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.460  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.460  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionComment/deleteComment/{id}.com.bth.lht.rest.missionController.MissionCommentController.delete.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.460  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionComment/deleteComment/{id}.com.bth.lht.rest.missionController.MissionCommentController.delete.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.461  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was 任务评论接口
+2019-04-12 09:53:10.462  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method delete was 任务评论接口
+2019-04-12 09:53:10.463  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.463  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.463  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.463  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.464  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionComment/listByMission/{missionId}.com.bth.lht.rest.missionController.MissionCommentController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.464  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionComment/listByMission/{missionId}.com.bth.lht.rest.missionController.MissionCommentController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.466  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 任务评论接口
+2019-04-12 09:53:10.468  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 任务评论接口
+2019-04-12 09:53:10.468  INFO 4072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2019-04-12 09:53:10.469  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.469  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.470  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.470  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.mission.MissionCommentRequest(false)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.471  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.472  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionComment/saveComment.com.bth.lht.rest.missionController.MissionCommentController.save.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.472  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionComment/saveComment.com.bth.lht.rest.missionController.MissionCommentController.save.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.473  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was 任务评论接口
+2019-04-12 09:53:10.474  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method save was 任务评论接口
+2019-04-12 09:53:10.474  INFO 4072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2019-04-12 09:53:10.475  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.476  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.476  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.476  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.477  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.477  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.477  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.477  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.team.TeamJoinMissionRequest(false)
+2019-04-12 09:53:10.477  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.477  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.478  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.478  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.478  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionTeam/joinByTeam.com.bth.lht.rest.missionController.missionTeamController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.478  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionTeam/joinByTeam.com.bth.lht.rest.missionController.missionTeamController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.492  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队接收任务接口
+2019-04-12 09:53:10.493  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队接收任务接口
+2019-04-12 09:53:10.494  INFO 4072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2019-04-12 09:53:10.505  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.505  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.506  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.506  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.506  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionTeam/getTeamMission.com.bth.lht.rest.missionController.missionTeamController.listTeamMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.506  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionTeam/getTeamMission.com.bth.lht.rest.missionController.missionTeamController.listTeamMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.508  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listTeamMission was 团队接收任务接口
+2019-04-12 09:53:10.509  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listTeamMission was 团队接收任务接口
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.512  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.514  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.514  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.514  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.514  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.team.TeamRequest(false)
+2019-04-12 09:53:10.514  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /team/add.com.bth.lht.rest.teamController.TeamController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.514  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /team/add.com.bth.lht.rest.teamController.TeamController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.519  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队相关接口
+2019-04-12 09:53:10.520  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队相关接口
+2019-04-12 09:53:10.520  INFO 4072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
+2019-04-12 09:53:10.522  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.522  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.522  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.522  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.522  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /team/get/{id}.com.bth.lht.rest.teamController.TeamController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.522  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /team/get/{id}.com.bth.lht.rest.teamController.TeamController.add.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.525  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队相关接口
+2019-04-12 09:53:10.526  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method add was 团队相关接口
+2019-04-12 09:53:10.527  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.528  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.528  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.528  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.528  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /team/getHotTeam.com.bth.lht.rest.teamController.TeamController.getHotTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.528  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /team/getHotTeam.com.bth.lht.rest.teamController.TeamController.getHotTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.530  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getHotTeam was 团队相关接口
+2019-04-12 09:53:10.531  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getHotTeam was 团队相关接口
+2019-04-12 09:53:10.532  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.532  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.532  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.533  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.533  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /team/list.com.bth.lht.rest.teamController.TeamController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.534  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /team/list.com.bth.lht.rest.teamController.TeamController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.536  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 团队相关接口
+2019-04-12 09:53:10.537  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 团队相关接口
+2019-04-12 09:53:10.538  INFO 4072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_2
+2019-04-12 09:53:10.539  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.539  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.539  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.539  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.540  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /team/listMyTeam.com.bth.lht.rest.teamController.TeamController.listMyTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.540  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /team/listMyTeam.com.bth.lht.rest.teamController.TeamController.listMyTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.543  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listMyTeam was 团队相关接口
+2019-04-12 09:53:10.544  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listMyTeam was 团队相关接口
+2019-04-12 09:53:10.545  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.545  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.545  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.545  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.545  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /teamUser/getUserTeam.com.bth.lht.rest.teamController.TeamUserController.getUserTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.545  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /teamUser/getUserTeam.com.bth.lht.rest.teamController.TeamUserController.getUserTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.547  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserTeam was 用户加入团队接口
+2019-04-12 09:53:10.547  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getUserTeam was 用户加入团队接口
+2019-04-12 09:53:10.548  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.548  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.548  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.548  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.548  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /teamUser/userJoinTeam/{teamId}.com.bth.lht.rest.teamController.TeamUserController.userJoinTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.548  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /teamUser/userJoinTeam/{teamId}.com.bth.lht.rest.teamController.TeamUserController.userJoinTeam.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.551  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method userJoinTeam was 用户加入团队接口
+2019-04-12 09:53:10.552  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method userJoinTeam was 用户加入团队接口
+2019-04-12 09:53:10.555  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.555  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.555  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.555  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.556  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionUser/getByUserAndMission/{missionId}.com.bth.lht.rest.missionController.MissionUserController.get.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.556  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionUser/getByUserAndMission/{missionId}.com.bth.lht.rest.missionController.MissionUserController.get.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.561  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was 用户所接受的任务相关接口
+2019-04-12 09:53:10.563  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method get was 用户所接受的任务相关接口
+2019-04-12 09:53:10.569  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.569  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.569  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.570  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.570  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionUser/getByMission/{missionId}.com.bth.lht.rest.missionController.MissionUserController.getByMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.570  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionUser/getByMission/{missionId}.com.bth.lht.rest.missionController.MissionUserController.getByMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.575  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByMission was 用户所接受的任务相关接口
+2019-04-12 09:53:10.577  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method getByMission was 用户所接受的任务相关接口
+2019-04-12 09:53:10.580  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.580  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.580  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.580  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.580  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionUser/joinByUser/{id}.com.bth.lht.rest.missionController.MissionUserController.joinByUser.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.580  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionUser/joinByUser/{id}.com.bth.lht.rest.missionController.MissionUserController.joinByUser.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.588  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method joinByUser was 用户所接受的任务相关接口
+2019-04-12 09:53:10.592  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method joinByUser was 用户所接受的任务相关接口
+2019-04-12 09:53:10.606  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.606  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.606  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.606  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.606  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionUser/listLeaderMission.com.bth.lht.rest.missionController.MissionUserController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.606  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionUser/listLeaderMission.com.bth.lht.rest.missionController.MissionUserController.list.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.612  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 用户所接受的任务相关接口
+2019-04-12 09:53:10.613  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method list was 用户所接受的任务相关接口
+2019-04-12 09:53:10.614  INFO 4072 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_3
+2019-04-12 09:53:10.619  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.619  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.619  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.619  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.MultiResponse(true)
+2019-04-12 09:53:10.620  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionUser/getUserMission.com.bth.lht.rest.missionController.MissionUserController.listMyMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.620  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionUser/getUserMission.com.bth.lht.rest.missionController.MissionUserController.listMyMission.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.623  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listMyMission was 用户所接受的任务相关接口
+2019-04-12 09:53:10.624  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method listMyMission was 用户所接受的任务相关接口
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.BaseResponse(true)
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.626  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.628  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.628  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.629  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.629  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.mission.UpdateMissionUserRequest(false)
+2019-04-12 09:53:10.629  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /missionUser/updateUserMission.com.bth.lht.rest.missionController.MissionUserController.update.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.630  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /missionUser/updateUserMission.com.bth.lht.rest.missionController.MissionUserController.update.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.634  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 用户所接受的任务相关接口
+2019-04-12 09:53:10.636  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method update was 用户所接受的任务相关接口
+2019-04-12 09:53:10.639  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.639  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.639  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.639  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.642  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.642  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.642  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.642  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.LoginRequest(false)
+2019-04-12 09:53:10.642  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.UserRequest(false)
+2019-04-12 09:53:10.642  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.UserRequest(false)
+2019-04-12 09:53:10.646  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.request.user.UserRequest(false)
+2019-04-12 09:53:10.646  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.request.user.UserRequest(false)
+2019-04-12 09:53:10.646  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.646  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.646  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.646  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.648  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.648  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.648  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.TokenVO(true)
+2019-04-12 09:53:10.649  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.TokenVO(true)
+2019-04-12 09:53:10.649  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.650  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.base.OneResponse<com.bth.lht.respose.TokenVO>(true)
+2019-04-12 09:53:10.650  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.TokenVO(true)
+2019-04-12 09:53:10.650  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.TokenVO(true)
+2019-04-12 09:53:10.650  INFO 4072 --- [main] s.d.s.p.ModelPropertiesKeyGenerator      : Cache key generated: com.bth.lht.respose.TokenVO(true)
+2019-04-12 09:53:10.650  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelProperties with key com.bth.lht.respose.TokenVO(true)
+2019-04-12 09:53:10.652  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/login.com.bth.lht.rest.userController.UserController.login.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.652  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/login.com.bth.lht.rest.userController.UserController.login.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.654  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method login was 用户接口
+2019-04-12 09:53:10.655  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method login was 用户接口
+2019-04-12 09:53:10.656  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.656  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache models with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.656  INFO 4072 --- [main] s.d.schema.ModelContextKeyGenerator      : Cache Key Generated: com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.656  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache modelDependencies with key com.bth.lht.respose.base.OneResponse(true)
+2019-04-12 09:53:10.656  INFO 4072 --- [main] s.d.spring.web.OperationsKeyGenerator    : Cache key generated: /user/reward.com.bth.lht.rest.userController.UserController.reward.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.656  INFO 4072 --- [main] s.d.spring.web.caching.CachingAspect     : Caching aspect applied for cache operations with key /user/reward.com.bth.lht.rest.userController.UserController.reward.DefaultGenericTypeNamingStrategy
+2019-04-12 09:53:10.657  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reward was 用户接口
+2019-04-12 09:53:10.658  INFO 4072 --- [main] s.w.ClassOrApiAnnotationResourceGrouping : Group for method reward was 用户接口
+2019-04-12 09:53:11.172  INFO 4072 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (https) 8080 (http) with context path ''
+2019-04-12 09:53:11.176  INFO 4072 --- [main] com.bth.lht.LhtApplication               : Started LhtApplication in 12.75 seconds (JVM running for 15.389)
+2019-04-12 09:53:21.691  INFO 4072 --- [https-jsse-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-12 09:53:21.691  INFO 4072 --- [https-jsse-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-12 09:53:21.705  INFO 4072 --- [https-jsse-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-04-12 09:53:21.872  INFO 4072 --- [https-jsse-nio-80-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-04-12 09:54:02.222  INFO 4072 --- [https-jsse-nio-80-exec-5] c.b.l.r.m.MissionController              : 用户【{openid}】请求
+2019-04-12 11:51:10.804  INFO 4072 --- [https-jsse-nio-80-exec-6] c.b.l.r.m.MissionController              : 用户【{openid}】请求
+2019-04-12 11:52:06.471  INFO 4072 --- [https-jsse-nio-80-exec-9] c.b.l.r.m.MissionController              : 用户【{openid}】请求
+2019-04-12 11:54:14.066  INFO 4072 --- [https-jsse-nio-80-exec-9] c.b.l.r.m.MissionController              : 用户【{openid}】请求
+2019-04-12 11:55:16.340  INFO 4072 --- [https-jsse-nio-80-exec-3] c.b.l.r.m.MissionController              : 用户【{openid}】请求
+2019-04-12 11:57:36.842  INFO 4072 --- [https-jsse-nio-80-exec-10] c.b.l.r.m.MissionController              : 用户【{openid}】请求
+2019-04-12 15:37:33.023  WARN 4072 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h33m57s831ms768µs37ns).
+2019-04-12 15:42:10.456  INFO 4072 --- [https-jsse-nio-80-exec-3] c.b.l.r.m.MissionController              : 用户【{openid}】请求
