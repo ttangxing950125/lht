@@ -12,6 +12,7 @@ import com.bth.lht.service.team.TeamService;
 import com.bth.lht.service.user.UserService;
 import com.bth.lht.util.ModelMapperUtil;
 import com.bth.lht.util.TokenUtil;
+import com.google.common.base.Strings;
 import io.swagger.annotations.Api;
 import jdk.nashorn.internal.parser.Token;
 import lombok.extern.slf4j.Slf4j;
@@ -134,8 +135,10 @@ public class TeamController extends BaseController {
         return successMulti(teamVOS);
     }
 
-    public MultiResponse listHotTeam(@RequestHeader("token")String token){
-        List<TeamEO> teamEOS = teamService.list();
-        return successMulti(teamEOS);
+
+
+    public static void main(Strings[] arg){
+
+
     }
 }

@@ -15,4 +15,6 @@ public interface TeamUserService {
     TeamUserEO add(TeamUserEO teamUserEO);
     //查找用户是否以及加入该团队
     TeamUserEO findTeamUserEOSByUserEOAndTeamEO(UserEO userEO , TeamEO teamEO);
+
+    List<TeamUserEO> getByUserEOAndStatus(UserEO userEO, String status);
 }

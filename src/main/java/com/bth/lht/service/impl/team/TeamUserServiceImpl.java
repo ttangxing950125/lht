@@ -37,4 +37,9 @@ public class TeamUserServiceImpl implements TeamUserService {
     public TeamUserEO findTeamUserEOSByUserEOAndTeamEO(UserEO userEO, TeamEO teamEO) {
         return teamUserRepository.findTeamUserEOSByUserEOAndTeamEO(userEO,teamEO);
     }
+
+    @Override
+    public List<TeamUserEO> getByUserEOAndStatus(UserEO userEO, String status) {
+        return teamUserRepository.findTeamUserEOSByUserEOAndStatus(userEO,status);
+    }
 }
