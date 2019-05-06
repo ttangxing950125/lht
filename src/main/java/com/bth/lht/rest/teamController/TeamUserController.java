@@ -45,7 +45,7 @@ public class TeamUserController extends BaseController {
         UserEO userEO = userService.findByOpenid(openid);
         TeamEO teamEO = teamService.getById(teamId);
         //判断是否已经加入
-        TeamUserEO t = teamUserService.findTeamUserEOSByUserEOAndTeamEO(userEO,teamEO);
+        TeamUserEO t = teamUserService.findTeamUserEOByUserEOAndTeamEO(userEO,teamEO);
         if (t!=null){
             //用户加入团队对象
             TeamUserEO teamUserEO = new TeamUserEO();
@@ -70,17 +70,16 @@ public class TeamUserController extends BaseController {
      */
     @GetMapping("getUserTeamByStatus/{status}")
     public  MultiResponse getUserTeamByStatus(@RequestHeader("token")String token,@PathVariable("status")String status){
-        String openid = TokenUtil.getUserOpenidByToken("token");
+        String openid = TokenUtil.getUserOpenidByToken(token);
         UserEO userEO = userService.findByOpenid(openid);
-
-
         List<TeamUserEO> list = teamUserService.getByUserEOAndStatus(userEO,status);
-
         List<TeamUserVO> result = ModelMapperUtil.getStrictModelMapper().map(list,new TypeToken<List<TeamUserVO>>(){}.getType());
         return successMulti(result);
 
 
     }
+
+
 
 
 }

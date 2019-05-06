@@ -2,6 +2,7 @@ package com.bth.lht.service.impl.project;
 
 import com.bth.lht.dao.project.MissionTeamRepository;
 import com.bth.lht.entity.project.MissionTeamEO;
+import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.team.TeamEO;
 import com.bth.lht.service.project.MissionTeamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +33,15 @@ public class MissionTeamServiceImpl implements MissionTeamService {
     @Override
     public List<MissionTeamEO> getMissionTeamEO(TeamEO teamEO) {
         return missionTeamRepository.findMissionTeamEOByTeamEO(teamEO);
+    }
+
+    @Override
+    public MissionTeamEO findByTeamEOAndMissionsEO(TeamEO teamEO, MissionsEO missionsEO) {
+        return missionTeamRepository.findByTeamEOAndMissionsEO(teamEO,missionsEO);
+    }
+
+    @Override
+    public List<MissionTeamEO> findAllByMissionsEO(MissionsEO missionsEO) {
+        return missionTeamRepository.findAllByMissionsEO(missionsEO);
     }
 }

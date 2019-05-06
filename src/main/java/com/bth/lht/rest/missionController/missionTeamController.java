@@ -90,7 +90,8 @@ public class missionTeamController extends BaseController {
             }
         }
         //映射为响应实体集合
-        List<MissionTeamVO> missionTeamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<MissionTeamVO>>(){}.getType());
+
+        List<MissionTeamVO> missionTeamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS,new TypeToken<List<MissionTeamEO>>(){}.getType());
         return successMulti(missionTeamVOS);
     }
 

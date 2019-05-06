@@ -50,13 +50,13 @@ public class UserController extends BaseController {
     @PostMapping("/login")
     public OneResponse<TokenVO> login(@Validated @RequestBody LoginRequest loginRequest){
         TokenVO tokenVO = new TokenVO();
-        System.out.println(loginRequest);
-        System.out.println(successOne(tokenVO).getDesc()+"123456");
+        System.out.println("请求参数"+loginRequest.toString());
         //返回token
         String token = userService.save(loginRequest);
         tokenVO.setToken(token);
         tokenVO.setOpenid(TokenUtil.getUserOpenidByToken(token));
 
+        System.out.println(tokenVO.toString());
         return successOne(tokenVO);
     }
 
@@ -67,5 +67,25 @@ public class UserController extends BaseController {
     @PostMapping("reward")
     public OneResponse reward(){
         return successOne(new StringBuffer("123123"));
+    }
+
+    //验证用户是否已经绑定手机
+    @PostMapping("phoneCheck")
+    public BaseResponse phoneCkeck(@RequestHeader("token")String token){
+        String openid = TokenUtil.getUserOpenidByToken(token);
+
+        UserEO u = userService.findByOpenid(openid);
+        BaseResponse baseResponse = new BaseResponse();
+        //判断当前用户是否已经绑定手机
+        if (u!=null){
+            if (u.getPhoneNumber()!=null){
+                return baseResponse;
+            }else {
+                baseResponse.setDesc("NO");
+                return baseResponse;
+            }
+        }
+
+        return null;
     }
 }

@@ -58,6 +58,8 @@ public class TokenUtil {
     public static Map<String, Claim> verifyToken(String token) throws UnsupportedEncodingException {
         JWTVerifier verifier = JWT.require(Algorithm.HMAC256(SECRET)).build();
         DecodedJWT jwt= verifier.verify(token);
+
+        Map<String, Claim> claim =jwt.getClaims();
         return jwt.getClaims();
     }
 
@@ -68,6 +70,7 @@ public class TokenUtil {
      * @return 用户用户Openid
      */
     public static String getUserOpenidByToken(String token) {
+
         Map<String, Claim> claims = null;
         try {
             claims = verifyToken(token);

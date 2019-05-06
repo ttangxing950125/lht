@@ -1,6 +1,7 @@
 package com.bth.lht.respose.mission;
 
 import com.bth.lht.entity.user.UserEO;
+import com.bth.lht.respose.wxUser.UserVO;
 import lombok.Data;
 import lombok.ToString;
 
@@ -43,5 +44,5 @@ public class MissionVO {
     //任务验收标准
     private String missionCheckStandard;
 
-    private UserEO userEO;
+    private UserVO userVO;
 }

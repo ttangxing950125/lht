@@ -5,6 +5,7 @@ import com.bth.lht.entity.project.MissionTeamEO;
 import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.user.UserEO;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.ToString;
 
@@ -22,6 +23,7 @@ import java.util.List;
 @ToString(exclude = {"missionTeamEOS"})
 @Entity
 @Table(name = "tb_team")
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 public class TeamEO extends BaseEntity {
     //队名
     @Column(name = "team_name",nullable = false)

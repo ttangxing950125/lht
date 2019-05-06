@@ -5,7 +5,6 @@ import com.bth.lht.entity.team.TeamEO;
 import com.bth.lht.entity.team.TeamUserEO;
 import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.service.TeamUserService;
-import com.bth.lht.service.team.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,12 +33,27 @@ public class TeamUserServiceImpl implements TeamUserService {
     }
 
     @Override
-    public TeamUserEO findTeamUserEOSByUserEOAndTeamEO(UserEO userEO, TeamEO teamEO) {
-        return teamUserRepository.findTeamUserEOSByUserEOAndTeamEO(userEO,teamEO);
+    public TeamUserEO findTeamUserEOByUserEOAndTeamEO(UserEO userEO, TeamEO teamEO) {
+        return teamUserRepository.findTeamUserEOByUserEOAndTeamEO(userEO,teamEO);
     }
 
     @Override
     public List<TeamUserEO> getByUserEOAndStatus(UserEO userEO, String status) {
         return teamUserRepository.findTeamUserEOSByUserEOAndStatus(userEO,status);
+    }
+
+    @Override
+    public List<TeamUserEO> countTeamUserEOSByTeamEO(TeamEO teamEO) {
+        return teamUserRepository.countTeamUserEOSByTeamEO(teamEO);
+    }
+
+    @Override
+    public List<TeamUserEO> findByTeamEO(TeamEO teamEO) {
+        return teamUserRepository.findTeamUserEOSByTeamEO(teamEO);
+    }
+
+    @Override
+    public TeamUserEO update(TeamUserEO teamUserEO) {
+        return teamUserRepository.save(teamUserEO);
     }
 }

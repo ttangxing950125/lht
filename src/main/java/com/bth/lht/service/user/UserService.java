@@ -13,7 +13,7 @@ import java.util.List;
  **/
 public interface UserService {
 //    UserEO save(UserEO userEO);
-UserEO findByOpenid(String id);
-
+    UserEO findByOpenid(String id);
+    UserEO findById(String id);
     String save(LoginRequest loginRequest);
 }

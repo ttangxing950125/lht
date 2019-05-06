@@ -1,8 +1,12 @@
 package com.bth.lht.respose.team;
 
+import com.bth.lht.respose.mission.MissionVO;
+import com.bth.lht.respose.wxUser.UserInfoVO;
+import com.bth.lht.respose.wxUser.UserVO;
 import lombok.Data;
 
 import javax.persistence.Column;
+import java.util.List;
 
 /**
  * @program: lht
@@ -24,8 +28,18 @@ public class TeamVO {
     private String teamInfo;
     //团队等级
     private String level;
+    //团队人数
+    private int peopleCount;
 
+    List<MissionVO> missionVOS;
 
+    //该团队所有的用户申请列表
+    List<UserVO> userVOS;
+
+    //成交量
+    private int makeDeal;
+    //成交总额
+    private double makeMoney;
 
     public void setTeamDesc(String teamDesc) {
         if (teamDesc.length()>12){

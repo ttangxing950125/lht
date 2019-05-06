@@ -14,4 +14,5 @@ import lombok.Data;
 public class MissionUserVO {
     private MissionsEO missionsEO;
     private String status;
+
 }

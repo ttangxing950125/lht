@@ -14,7 +14,15 @@ public interface TeamUserService {
 
     TeamUserEO add(TeamUserEO teamUserEO);
     //查找用户是否以及加入该团队
-    TeamUserEO findTeamUserEOSByUserEOAndTeamEO(UserEO userEO , TeamEO teamEO);
+    TeamUserEO findTeamUserEOByUserEOAndTeamEO(UserEO userEO , TeamEO teamEO);
 
     List<TeamUserEO> getByUserEOAndStatus(UserEO userEO, String status);
+
+    //查找一个团队的人数
+    List<TeamUserEO>  countTeamUserEOSByTeamEO(TeamEO teamEO);
+    //通过团队查找
+    List<TeamUserEO>  findByTeamEO(TeamEO teamEO);
+
+    TeamUserEO update(TeamUserEO teamUserEO);
+
 }

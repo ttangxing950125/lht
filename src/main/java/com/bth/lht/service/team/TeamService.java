@@ -15,9 +15,13 @@ public interface TeamService {
     List<TeamEO> findByLeader(UserEO leader);
     TeamEO addTeam(TeamEO teamEO);
 
+
     TeamEO getById(String id);
 
     List<TeamEO> list();
 
     List<TeamEO> getByLevel(String level);
+
+    List<TeamEO> findAllByUserEO(UserEO userEO);
+
 }

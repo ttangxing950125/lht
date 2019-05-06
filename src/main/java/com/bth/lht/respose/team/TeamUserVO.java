@@ -2,11 +2,15 @@ package com.bth.lht.respose.team;
 
 import com.bth.lht.entity.team.TeamEO;
 import com.bth.lht.entity.user.UserEO;
+import com.bth.lht.respose.wxUser.UserInfoVO;
+import com.bth.lht.respose.wxUser.UserVO;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import java.util.List;
 
 /**
  * @program: lht
@@ -18,8 +22,10 @@ import javax.persistence.ManyToOne;
 public class TeamUserVO {
     private String status;
 
-    private TeamEO teamEO;
+    private TeamVO teamVO;
 
-    private UserEO userEO;
+    private UserVO userVO;
+
+
 
 }

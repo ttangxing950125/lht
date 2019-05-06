@@ -12,9 +12,12 @@ import java.util.List;
  * @author: Antony
  * @create: 2019-04-03 11:43
  **/
+
 public interface TeamRepository extends JpaRepository<TeamEO,String> {
     //查找用户所拥有的团队
     List<TeamEO> findTeamEOSByUserEO(UserEO leader);
 
     List<TeamEO> findTeamEOSByLevel(String level);
+
+    List<TeamEO> findAllByUserEO(UserEO userEO);
 }

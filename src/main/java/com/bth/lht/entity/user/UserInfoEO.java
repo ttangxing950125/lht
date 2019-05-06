@@ -24,8 +24,19 @@ public class UserInfoEO extends BaseEntity implements Serializable {
     private String username;
     @Column(name = "info_password")
     private String password;
+    @Column(name="level")
+    private String level;
+    @Column(name="my_desc")
+    private String mydesc;
+    @Column(name ="my_technology" )
+    private String mytechnology;
+    @Column(name= "make_money")
+    private String makeMoney;
+    @Column(name = "make_deal")
+    private int makeDeal;
 
     @OneToOne(mappedBy = "userInfoEO")
     private UserEO userEO;
+
 
 }

@@ -11,6 +11,7 @@ import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.project.MissionCommentService;
 import com.bth.lht.service.project.MissionsService;
 import com.bth.lht.util.ModelMapperUtil;
+import com.bth.lht.util.TokenUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -42,15 +43,17 @@ public class MissionCommentController extends BaseController {
     public MultiResponse list(@PathVariable("missionId")String missionId){
         List<MissionCommentEO> commentEOS = missionCommentService.findMissionCommentEOSByMissionsEO(missionsService.get(missionId));
         List<MissionCommentVO> commentVOS = ModelMapperUtil.getStrictModelMapper().map(commentEOS,new TypeToken<List<MissionCommentVO>>(){}.getType());
-        return successMulti(commentVOS);
+            return successMulti(commentVOS);
     }
 
     @ApiOperation("添加评论")
     @PostMapping("saveComment")
-    public OneResponse save(@RequestBody @Validated MissionCommentRequest request){
+    public OneResponse save(@RequestBody @Validated MissionCommentRequest request,@RequestHeader("token")String token){
+        String openid = TokenUtil.getUserOpenidByToken(token);
         MissionCommentEO commentEO = new MissionCommentEO();
-        commentEO.setOpenid("oX0QT0R0mV-aA-EbtSQo5WwHUXkQ");
+        commentEO.setOpenid(openid);
         commentEO.setContent(request.getContent());
+        System.out.println("you you you "+request);
         commentEO.setMissionsEO(missionsService.get(request.getMissionId()));
 
 

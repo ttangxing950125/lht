@@ -1,6 +1,7 @@
 package com.bth.lht.dao.project;
 
 import com.bth.lht.entity.project.MissionTeamEO;
+import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.team.TeamEO;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -14,4 +15,6 @@ import java.util.List;
  **/
 public interface MissionTeamRepository extends JpaRepository<MissionTeamEO,String> {
     List<MissionTeamEO> findMissionTeamEOByTeamEO(TeamEO teamEO);
+    MissionTeamEO findByTeamEOAndMissionsEO(TeamEO teamEO, MissionsEO missionsEO);
+    List<MissionTeamEO> findAllByMissionsEO(MissionsEO missionsEO);
 }

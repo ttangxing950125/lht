@@ -1,14 +1,14 @@
 #==================== wx-args setting ====================#
 wx-applet:
-  appid: wx1304ae22d2c0112a
-  secret: 6bab0148238f07c3f6bb8d8b488e2306
+  appid: wx394581d5f7b79fee
+  secret: bfd29e8033c3669360130ac154e831e0
   grant_type: authorization_code
 
 #==================== Tomcat Setting =====================#
 http:
-  port: 8080
-server:
   port: 80
+server:
+  port: 443
   ssl:
     key-store: cert-1542771005276_antony0127.cn.pfx
     key-store-password: 1P4u9dwU
@@ -41,14 +41,15 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
   datasource:
-    driver-Class-Name: com.mysql.cj.jdbc.Driver
+    driver-Class-Name: com.mysql.jdbc.Driver
     username: root
     password: root
     url: jdbc:mysql://127.0.0.1:3306/db_lht?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-
+  main:
+    allow-bean-definition-overriding: true
 
 #server:
 #  port: 80

@@ -143,4 +143,22 @@ public class MissionController extends BaseController {
         MissionVO missionVO = ModelMapperUtil.getStrictModelMapper().map(m,MissionVO.class);
         return successOne(missionVO);
     }
+
+    /**
+     * 根据当前用户查找接到的任务
+     */
+    public MultiResponse findMissionsByUserId(@RequestHeader("token")String token){
+        UserEO userEO = userService.findByOpenid(TokenUtil.getUserOpenidByToken(token));
+        List<MissionUserEO> missionUserEOS = missionUserService.findMissionUserEOSByUserEO(userEO);
+        //找到对应的任务体
+        List<MissionsEO> missionsEOS =new ArrayList<>();
+        for (MissionUserEO mu:missionUserEOS
+             ) {
+            missionsEOS.add(missionsService.get(mu.getMissionsEO().getId()));
+
+        }
+        List<MissionVO> missionVOS = ModelMapperUtil.getStrictModelMapper().map(missionsEOS, new TypeToken<List<MissionVO>>(){}.getType());
+        return  successMulti(missionVOS);
+    }
+
 }

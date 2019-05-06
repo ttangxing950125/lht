@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public String save(LoginRequest loginRequest) {
         WxUserKeyVO sessionKeyOrOpenid = wxAppletService.getSessionKeyOrOpenid(loginRequest.getCode());
-
+        System.out.println("查到openid"+sessionKeyOrOpenid.toString());
         UserEO userEO = userRepository.findUserEOByWxOpenid(sessionKeyOrOpenid.getOpenid());
         if ( userEO != null){
             userEO.setWxOpenid(sessionKeyOrOpenid.getOpenid());
@@ -51,6 +51,11 @@ public class UserServiceImpl implements UserService {
     public UserEO findByOpenid(String openid) {
         System.out.println(openid);
         return userRepository.findUserEOByWxOpenid(openid);
+    }
+
+    @Override
+    public UserEO findById(String id) {
+        return userRepository.getOne(id);
     }
 
 }

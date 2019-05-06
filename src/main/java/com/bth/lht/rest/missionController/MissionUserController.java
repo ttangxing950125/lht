@@ -102,7 +102,6 @@ public class MissionUserController extends BaseController {
         List<MissionUserEO> missionUserEOS = missionUserService.findMissionUserEOSByUserEO(userService.findByOpenid(openid));
         List<MissionUserVO> missionUserVOS = ModelMapperUtil.getStrictModelMapper().
                 map(missionUserEOS,new TypeToken<List<MissionUserVO>>(){}.getType());
-        System.out.println(missionUserEOS.size());
         return successMulti(missionUserVOS);
     }
 

@@ -44,4 +44,11 @@ public class TeamServiceImpl implements TeamService {
     public List<TeamEO> getByLevel(String level) {
         return teamRepository.findTeamEOSByLevel(level);
     }
+
+    @Override
+    public List<TeamEO> findAllByUserEO(UserEO userEO) {
+        return teamRepository.findAllByUserEO(userEO);
+    }
+
+
 }

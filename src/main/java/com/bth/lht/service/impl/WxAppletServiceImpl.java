@@ -41,7 +41,7 @@ public class WxAppletServiceImpl implements WxAppletService {
         requestUrlParam.put("grant_type", wxApplet.getGrant_type());//默认参数
         String str =this.sendGet(url,requestUrlParam);
         WxUserKeyVO wxUserKeyVO = JSON.parseObject(str,new TypeReference<WxUserKeyVO>(){});
-        System.out.println(str);
+        System.out.println("sessionAndOpeind请求返回"+str);
         return wxUserKeyVO;
     }
 
