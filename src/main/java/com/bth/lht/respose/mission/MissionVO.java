@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * @program: lht
@@ -45,4 +46,9 @@ public class MissionVO {
     private String missionCheckStandard;
 
     private UserVO userVO;
+    //倒计时
+    List<String> countDownList;
+
+    //任务等级
+    private int missionLevel;
 }

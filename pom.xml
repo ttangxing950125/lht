@@ -72,8 +72,10 @@
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-core</artifactId>
-            <version>4.1.0</version>
+            <version>3.2.8</version>
         </dependency>
+       
+
 
         <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-util -->
         <dependency>

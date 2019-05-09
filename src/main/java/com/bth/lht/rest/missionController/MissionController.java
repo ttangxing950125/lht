@@ -77,16 +77,28 @@ public class MissionController extends BaseController {
      */
     @PostMapping("add")
     @ApiOperation("添加任务")
-    public OneResponse<MissionsEO> add(@Validated @RequestBody MissionRequest missionRequest,@RequestHeader("token")String token){
+    public OneResponse add(@Validated @RequestBody MissionRequest missionRequest,@RequestHeader("token")String token){
+        OneResponse oneResponse =new OneResponse();
         String openid = TokenUtil.getUserOpenidByToken(token);
+        UserEO userEO = userService.findByOpenid(TokenUtil.getUserOpenidByToken(token));
+
         MissionsEO missionsEO = ModelMapperUtil.getStrictModelMapper().map(missionRequest,MissionsEO.class);
         missionsEO.setLeaderEO(userRepository.findUserEOByWxOpenid(openid));
         //初始化父级任务
         missionsEO.setParentId("0");
         log.info("开始添加任务");
-        missionsService.save(missionsEO);
-        log.info("结束添加任务");
-        return successOne(missionsEO);
+        if(userEO.getPhoneNumber()!=null){
+            missionsService.save(missionsEO);
+            log.info("结束添加任务");
+            oneResponse.setStatus(1);
+            oneResponse.setDesc("OK");
+            return successOne(oneResponse);
+        }else {
+            oneResponse.setStatus(2);
+            return successOne(oneResponse);
+        }
+
+
     }
     /**
      * 拆分任务，注：拆分任务逻辑：重新添加该任务，需要修改其leaderID,并修改其任务等级
