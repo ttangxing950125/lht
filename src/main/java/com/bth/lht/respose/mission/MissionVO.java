@@ -33,7 +33,7 @@ public class MissionVO {
     //任务奖励类型
     private String missionAwardType;
     //任务奖励数量
-    private String missionAward;
+        private String missionAward;
     //任务类型
     private String missionType;
     //任务定金

@@ -158,7 +158,7 @@ public class TeamapprovalController extends BaseController {
 
             MissionUserEO missionUserEO = missionUserService.findMissionUserEOByUserEOAndMissionsEO(userEO, missionsEO);
             missionUserEO.setStatus("done");
-
+//             missionVO = ModelMapperUtil.getStrictModelMapper(missionUserService.save(missionUserEO),new TypeToken<MissionVO>(){}.getType());
 
             return successOne(missionUserService.save(missionUserEO));
         } else if (missionApprovalRequest.getTeamId() != null) {

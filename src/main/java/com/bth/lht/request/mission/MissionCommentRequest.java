@@ -17,4 +17,6 @@ public class MissionCommentRequest {
     private String content;//评论内容
     @ApiModelProperty("所评论的任务")
     private String MissionId;//任务id
+    @ApiModelProperty("评论者")
+    private String commentUser;
 }

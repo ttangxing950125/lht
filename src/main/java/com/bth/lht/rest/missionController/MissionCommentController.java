@@ -2,6 +2,7 @@ package com.bth.lht.rest.missionController;
 
 import com.bth.lht.entity.project.MissionCommentEO;
 import com.bth.lht.entity.project.MissionsEO;
+import com.bth.lht.entity.user.UserEO;
 import com.bth.lht.request.mission.MissionCommentRequest;
 import com.bth.lht.respose.base.BaseResponse;
 import com.bth.lht.respose.base.MultiResponse;
@@ -10,6 +11,7 @@ import com.bth.lht.respose.mission.MissionCommentVO;
 import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.project.MissionCommentService;
 import com.bth.lht.service.project.MissionsService;
+import com.bth.lht.service.user.UserService;
 import com.bth.lht.util.ModelMapperUtil;
 import com.bth.lht.util.TokenUtil;
 import io.swagger.annotations.Api;
@@ -20,6 +22,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -38,12 +42,22 @@ public class MissionCommentController extends BaseController {
     private MissionCommentService missionCommentService;
     @Autowired
     private MissionsService missionsService;
+    @Autowired
+    private UserService userService;
     @ApiOperation("查找任务的所有评论")
-    @GetMapping("listByMission/{missionId}")
-    public MultiResponse list(@PathVariable("missionId")String missionId){
+    @GetMapping("listByMissionComments/{missionId}")
+    public MultiResponse list(@PathVariable("missionId")String missionId,@RequestHeader("token")String token){
+        String openid = TokenUtil.getUserOpenidByToken(token);
         List<MissionCommentEO> commentEOS = missionCommentService.findMissionCommentEOSByMissionsEO(missionsService.get(missionId));
         List<MissionCommentVO> commentVOS = ModelMapperUtil.getStrictModelMapper().map(commentEOS,new TypeToken<List<MissionCommentVO>>(){}.getType());
-            return successMulti(commentVOS);
+        SimpleDateFormat sf =new SimpleDateFormat("yyyy年MM月dd日");
+      for (int i=0;i<commentEOS.size();i++){
+          commentVOS.get(i).setCreatTime(sf.format(commentEOS.get(i).getCreateDate()));
+          commentVOS.get(i).setCommentUser(userService.findByOpenid(commentEOS.get(i).getOpenid()).getWxNickName());
+
+      }
+
+        return successMulti(commentVOS);
     }
 
     @ApiOperation("添加评论")
@@ -51,11 +65,13 @@ public class MissionCommentController extends BaseController {
     public OneResponse save(@RequestBody @Validated MissionCommentRequest request,@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);
         MissionCommentEO commentEO = new MissionCommentEO();
+        Date date =new Date();
+
         commentEO.setOpenid(openid);
         commentEO.setContent(request.getContent());
         System.out.println("you you you "+request);
         commentEO.setMissionsEO(missionsService.get(request.getMissionId()));
-
+        commentEO.setCreateDate(date);
 
        MissionCommentEO res =  missionCommentService.save(commentEO);
 //       响应封装
@@ -72,5 +88,42 @@ public class MissionCommentController extends BaseController {
         missionCommentService.delete(id);
         return new BaseResponse();
     }
+
+        @PostMapping("addMissionComment")
+        public OneResponse addMissionComments(@RequestHeader("token")String token,@RequestBody @Validated MissionCommentRequest mcomment){
+            String openid = TokenUtil.getUserOpenidByToken(token);
+            UserEO userEO = userService.findByOpenid(openid);
+            Date date =new Date();
+            //
+            MissionCommentEO missionCommentEO =new MissionCommentEO();
+            if (mcomment!=null){
+                missionCommentEO.setCreateDate(date);
+                missionCommentEO.setContent(mcomment.getContent());
+                //找到当前任务
+                MissionsEO missionsEO = missionsService.get(mcomment.getMissionId());
+
+                missionCommentEO.setMissionsEO(missionsEO);
+                missionCommentEO.setOpenid(openid);
+
+            }
+            String dec = null;
+            try {
+               missionCommentService.save(missionCommentEO);
+               dec = "评论发表成功！";
+            }catch (Exception e){
+                e.printStackTrace();
+
+                dec =  "评论失败！";
+            }
+            SimpleDateFormat sf =new SimpleDateFormat("yyyy年MM月dd日");
+               OneResponse oneResponse =new OneResponse();
+                MissionCommentVO missionCommentVO = ModelMapperUtil.getStrictModelMapper().map(missionCommentEO,new TypeToken<MissionCommentVO>(){}.getType());
+                    missionCommentVO.setCreatTime(sf.format(date));
+                    missionCommentVO.setCommentUser(userEO.getWxNickName());
+                    oneResponse.setDesc(dec);
+                    oneResponse.setData(missionCommentVO);
+                return successOne(oneResponse);
+
+        }
 
 }

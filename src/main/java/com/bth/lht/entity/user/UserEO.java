@@ -6,6 +6,7 @@ import com.bth.lht.entity.project.MissionUserEO;
 import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.entity.team.TeamEO;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.ToString;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -23,6 +24,7 @@ import java.util.List;
 @Data
 @ToString(exclude = {"userInfoEO","createMissionEOS","joinMissionsEOS","missionUserEOS"})
 @Entity
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
 @Table(name = "tb_wx_user")
 public class UserEO extends BaseEntity {
     @Column(name = "wx_openid",nullable = false,updatable = false)

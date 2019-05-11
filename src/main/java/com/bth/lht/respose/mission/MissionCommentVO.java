@@ -16,6 +16,9 @@ import javax.persistence.ManyToOne;
  **/
 @Data
 public class MissionCommentVO {
+    private String creatTime;//时间
     private String content;//评论内容
+    private String  commentUser;//评论人
+
 
 }

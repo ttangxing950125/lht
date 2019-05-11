@@ -152,7 +152,10 @@ public class MissionController extends BaseController {
     @GetMapping("get/{id}")
     public OneResponse getById(@PathVariable("id")String id,@RequestHeader("token")String token){
         MissionsEO m = missionsService.get(id);
-        MissionVO missionVO = ModelMapperUtil.getStrictModelMapper().map(m,MissionVO.class);
+        MissionVO missionVO = null;
+        if(m!=null) {
+            missionVO  = ModelMapperUtil.getStrictModelMapper().map(m, MissionVO.class);
+        }
         return successOne(missionVO);
     }
 
