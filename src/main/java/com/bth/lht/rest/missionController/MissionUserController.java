@@ -111,7 +111,7 @@ public class MissionUserController extends BaseController {
      */
     @PostMapping("updateUserMission")
     @ApiOperation("更改用户所接受的任务的状态")
-    public BaseResponse update(@RequestHeader("token") String token, @RequestBody @Validated UpdateMissionUserRequest request){
+    public OneResponse<String> update(@RequestHeader("token") String token, @RequestBody @Validated UpdateMissionUserRequest request){
         System.out.println(request.toString());
 
         String openid = TokenUtil.getUserOpenidByToken(token);
@@ -122,7 +122,11 @@ public class MissionUserController extends BaseController {
             missionUserEO.setStatus(request.getCategory());
         }
         missionUserService.update(missionUserEO);
-        return  new BaseResponse();
+        OneResponse oneResponse =new OneResponse();
+        //根据任务找到任务发布者
+        UserEO userEO = userService.findById(missionsEO.getLeaderEO().getId());
+        oneResponse.setData(userEO.getWxOpenid());
+        return  successOne(oneResponse);
     }
 
 
