@@ -48,6 +48,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserEO save(UserEO userEO) {
+        return userRepository.save(userEO);
+    }
+
+    @Override
     public UserEO findByOpenid(String openid) {
         System.out.println(openid);
         return userRepository.findUserEOByWxOpenid(openid);

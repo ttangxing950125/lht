@@ -37,6 +37,8 @@ public class UserEO extends BaseEntity {
     private BigDecimal integral;
     @Column(name = "phoneNumber")
     private String phoneNumber;
+    @Column(name = "phoneCode")
+    private String phoneCode;
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_info_id")
     private UserInfoEO userInfoEO;

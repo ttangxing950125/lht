@@ -16,4 +16,5 @@ public interface UserService {
     UserEO findByOpenid(String id);
     UserEO findById(String id);
     String save(LoginRequest loginRequest);
+    UserEO save(UserEO userEO);
 }

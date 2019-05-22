@@ -1,6 +1,5 @@
 package com.bth.lht.rest.missionController;
 
-import com.bth.lht.dao.project.MissionsRepository;
 import com.bth.lht.dao.user.UserRepository;
 import com.bth.lht.entity.project.MissionUserEO;
 import com.bth.lht.entity.project.MissionsEO;
@@ -10,7 +9,6 @@ import com.bth.lht.respose.base.BaseResponse;
 import com.bth.lht.respose.base.MultiResponse;
 import com.bth.lht.respose.base.OneResponse;
 import com.bth.lht.respose.mission.IsMineMissionVO;
-import com.bth.lht.respose.mission.MissionUserVO;
 import com.bth.lht.respose.mission.MissionVO;
 import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.project.MissionUserService;
@@ -20,15 +18,11 @@ import com.bth.lht.util.ModelMapperUtil;
 import com.bth.lht.util.TokenUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import jdk.nashorn.internal.parser.TokenType;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import javax.websocket.server.PathParam;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
