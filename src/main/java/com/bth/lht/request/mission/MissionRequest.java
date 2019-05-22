@@ -47,4 +47,6 @@ public class MissionRequest {
     private String missionDemand;
     //任务验收标准
     private String missionCheckStandard;
+
+    private int missionLevel;
 }
