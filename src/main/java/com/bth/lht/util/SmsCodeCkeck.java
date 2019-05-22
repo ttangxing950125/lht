@@ -8,6 +8,8 @@ import com.aliyuncs.exceptions.ServerException;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 
+import java.util.Random;
+
 
 /*
 pom.xml
@@ -51,9 +53,11 @@ pom.xml
          * @return
          */
         public String getRadomNum(){
-            //Random random =new Random();
-            int x=(int)(Math.random()*10000);
-            String code = x +"";
+            int max=10000;
+            int min=1000;
+            Random random = new Random();
+            int s = random.nextInt(max)%(max-min+1) + min;
+            String code = s +"";
             System.out.println(code);
             return code;
         }
