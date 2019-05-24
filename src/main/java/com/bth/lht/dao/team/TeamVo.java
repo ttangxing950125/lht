@@ -12,12 +12,10 @@ public interface TeamVo {
 
 
     //查找当前热门团队
-    @Select("\n" +
-            "SELECT a.id,a.team_name,a.team_desc,a.team_info,c.peoplecount FROM tb_team a,\n" +
-            "\n" +
-            "(SELECT COUNT(user_id) AS peoplecount,team_id FROM tb_team_user ) c \n" +
-            "\n" +
-            "\n" +
+    @Select("SELECT a.id,a.team_name,a.team_desc,a.team_info,c.peoplecount FROM tb_team a,\n" +
+            "(\n" +
+            "SELECT COUNT(user_id) AS peoplecount,team_id FROM tb_team_user GROUP BY team_id\n" +
+            ") c \n" +
             "WHERE  a.id = c.team_id ORDER BY a.level DESC LIMIT 0,3\n")
     @Results({
             @Result(property = "id",column ="id" ),

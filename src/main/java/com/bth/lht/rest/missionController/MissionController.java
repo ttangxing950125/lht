@@ -10,6 +10,7 @@ import com.bth.lht.respose.base.MultiResponse;
 import com.bth.lht.respose.base.OneResponse;
 import com.bth.lht.respose.mission.IsMineMissionVO;
 import com.bth.lht.respose.mission.MissionVO;
+import com.bth.lht.respose.wxUser.UserVO;
 import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.project.MissionUserService;
 import com.bth.lht.service.project.MissionsService;
@@ -147,8 +148,12 @@ public class MissionController extends BaseController {
     public OneResponse getById(@PathVariable("id")String id,@RequestHeader("token")String token){
         MissionsEO m = missionsService.get(id);
         MissionVO missionVO = null;
+        UserVO userVO = null;
         if(m!=null) {
+            UserEO userEO = m.getLeaderEO();
+            userVO = ModelMapperUtil.getStrictModelMapper().map(userEO,UserVO.class);
             missionVO  = ModelMapperUtil.getStrictModelMapper().map(m, MissionVO.class);
+            missionVO.setUserVO(userVO);
         }
         return successOne(missionVO);
     }
