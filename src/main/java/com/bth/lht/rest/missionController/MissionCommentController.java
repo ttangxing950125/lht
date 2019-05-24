@@ -8,6 +8,7 @@ import com.bth.lht.respose.base.BaseResponse;
 import com.bth.lht.respose.base.MultiResponse;
 import com.bth.lht.respose.base.OneResponse;
 import com.bth.lht.respose.mission.MissionCommentVO;
+import com.bth.lht.respose.wxUser.UserVO;
 import com.bth.lht.rest.baseController.BaseController;
 import com.bth.lht.service.project.MissionCommentService;
 import com.bth.lht.service.project.MissionsService;
@@ -48,12 +49,15 @@ public class MissionCommentController extends BaseController {
     @GetMapping("listByMissionComments/{missionId}")
     public MultiResponse list(@PathVariable("missionId")String missionId,@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);
+
         List<MissionCommentEO> commentEOS = missionCommentService.findMissionCommentEOSByMissionsEO(missionsService.get(missionId));
         List<MissionCommentVO> commentVOS = ModelMapperUtil.getStrictModelMapper().map(commentEOS,new TypeToken<List<MissionCommentVO>>(){}.getType());
         SimpleDateFormat sf =new SimpleDateFormat("yyyy年MM月dd日");
+        UserVO userVO = null;
       for (int i=0;i<commentEOS.size();i++){
+          userVO = ModelMapperUtil.getStrictModelMapper().map(userService.findByOpenid(commentEOS.get(i).getOpenid()),UserVO.class);
           commentVOS.get(i).setCreatTime(sf.format(commentEOS.get(i).getCreateDate()));
-          commentVOS.get(i).setCommentUser(userService.findByOpenid(commentEOS.get(i).getOpenid()).getWxNickName());
+          commentVOS.get(i).setUserVO(userVO);
 
       }
 
@@ -115,11 +119,13 @@ public class MissionCommentController extends BaseController {
 
                 dec =  "评论失败！";
             }
+           UserVO userVO = ModelMapperUtil.getStrictModelMapper().map(userEO,UserVO.class);
+
             SimpleDateFormat sf =new SimpleDateFormat("yyyy年MM月dd日");
                OneResponse oneResponse =new OneResponse();
                 MissionCommentVO missionCommentVO = ModelMapperUtil.getStrictModelMapper().map(missionCommentEO,new TypeToken<MissionCommentVO>(){}.getType());
                     missionCommentVO.setCreatTime(sf.format(date));
-                    missionCommentVO.setCommentUser(userEO.getWxNickName());
+                    missionCommentVO.setUserVO(userVO);
                     oneResponse.setDesc(dec);
                     oneResponse.setData(missionCommentVO);
                 return successOne(oneResponse);
