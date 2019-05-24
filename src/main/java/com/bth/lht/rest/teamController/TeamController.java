@@ -111,6 +111,7 @@ public class TeamController extends BaseController {
         // List<TeamUserEO> teamUserEOS = teamUserService.countTeamUserEOSByTeamEO()
         List<TeamVO> teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS, new TypeToken<List<TeamVO>>() {
         }.getType());
+        System.out.println("查看所有的队伍"+teamEOS.toString());
         //每个团队对应人数
         if (teamVOS.size() > 0) {
             for (TeamVO tv : teamVOS
