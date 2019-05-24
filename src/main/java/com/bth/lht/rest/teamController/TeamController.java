@@ -17,7 +17,6 @@ import com.bth.lht.service.team.TeamService;
 import com.bth.lht.service.user.UserService;
 import com.bth.lht.util.ModelMapperUtil;
 import com.bth.lht.util.TokenUtil;
-import com.google.common.base.Strings;
 import io.swagger.annotations.Api;
 import org.modelmapper.TypeToken;
 import org.slf4j.Logger;
@@ -116,6 +115,7 @@ public class TeamController extends BaseController {
         if (teamVOS.size() > 0) {
             for (TeamVO tv : teamVOS
             ) {
+
 
                 for (TeamEO te : teamEOS
                 ) {

@@ -10,11 +10,11 @@ http:
 server:
   port: 443
   ssl:
-    key-store: cert-1542771005276_antony0127.cn.pfx
+    key-store: cert-1542771005276_antony0127.cn.jks
     key-store-password: 1P4u9dwU
-  tomcat:
+tomcat:
     uri-encoding: UTF-8
-
+    max-http-header-size: 8096
 
 #==================== logging Setting =====================#
 logging:

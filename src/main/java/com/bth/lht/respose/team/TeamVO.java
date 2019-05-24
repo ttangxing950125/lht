@@ -22,6 +22,7 @@ public class TeamVO {
     //团队擅长领域
     private String teamTechnology;
 
+
     //团队介绍，服务类型
     private String teamDesc;
     //团队简介
@@ -40,6 +41,8 @@ public class TeamVO {
     private int makeDeal;
     //成交总额
     private double makeMoney;
+
+
 
     public void setTeamDesc(String teamDesc) {
         if (teamDesc.length()>12){

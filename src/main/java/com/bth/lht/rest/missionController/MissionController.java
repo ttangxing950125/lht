@@ -82,14 +82,14 @@ public class MissionController extends BaseController {
         missionsEO.setParentId("0");
         log.info("开始添加任务");
         if(userEO.getPhoneNumber()!=null){
-            missionsService.save(missionsEO);
+           MissionsEO m= missionsService.save(missionsEO);
             log.info("结束添加任务");
-            oneResponse.setStatus(1);
-            oneResponse.setDesc("OK");
-            return successOne(oneResponse);
+//            oneResponse.setStatus(1);
+//            oneResponse.setDesc("OK");
+            return successOne(m);
         }else {
-            oneResponse.setStatus(2);
-            return successOne(oneResponse);
+//            oneResponse.setStatus(2);
+            return successOne(null);
         }
 
 
@@ -100,15 +100,15 @@ public class MissionController extends BaseController {
      */
     @ApiOperation("拆分任务")
     @PostMapping("split/{parentId}")
-    public BaseResponse split(@Validated @RequestBody MissionRequest missionRequest,@PathVariable("parentId")String parentId,@RequestHeader("token")String token){
+    public OneResponse split(@Validated @RequestBody MissionRequest missionRequest,@PathVariable("parentId")String parentId,@RequestHeader("token")String token){
         String openid = TokenUtil.getUserOpenidByToken(token);
         MissionsEO missionsEO = ModelMapperUtil.getStrictModelMapper().map(missionRequest,MissionsEO.class);
         //设置领导人id
         missionsEO.setLeaderEO(userRepository.findUserEOByWxOpenid(openid));
         //设置父任务id
         missionsEO.setParentId(parentId);
-        missionsService.save(missionsEO);
-        return new BaseResponse();
+        MissionsEO m = missionsService.save(missionsEO);
+        return successOne(m);
     }
     /**
      * 提交任务 注：任务任意字段改变都可称为修改任务
