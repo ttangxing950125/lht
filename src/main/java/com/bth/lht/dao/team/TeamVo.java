@@ -32,59 +32,59 @@ public interface TeamVo {
 
     // 根据id查找团队
     @Select("SELECT\n" +
-            "\ta.team_id,\n" +
-            "\ta.team_name,\n" +
-            "\ta.team_desc,\n" +
-            "\ta.`level`,\n" +
-            "\ta.team_technology,\n" +
-            "\ta.team_info,\n" +
-            "\tc.peopleCount,\n" +
-            "\te.makeDeal,\n" +
-            "\te.atype,\n" +
-            "\te.makeMoney,\n" +
-            "\tmakeDeal\n" +
-            "FROM\n" +
-            "\ttb_team a,\n" +
-            "\t(\n" +
-            "\t\tSELECT\n" +
-            "\t\t\tCOUNT(user_id)AS peoplecount,\n" +
-            "\t\t\tteam_id\n" +
-            "\t\tFROM\n" +
-            "\t\t\ttb_team_user\n" +
-            "\t\tWHERE\n" +
-            "\t\t\tteam_id = #{id}\n" +
-            "\t)c,\n" +
-            "\t(\n" +
-            "\t\tSELECT\n" +
-            "\t\t\tcount(d.id)makeDeal,\n" +
-            "\t\t\td.mission_award_type atype,\n" +
-            "\t\t\tSUM(d.mission_award)makeMoney\n" +
-            "\t\tFROM\n" +
-            "\t\t\ttb_missions d\n" +
-            "\t\tWHERE\n" +
-            "\t\t\td.id IN(\n" +
-            "\t\t\t\tSELECT\n" +
-            "\t\t\t\t\tmission_id\n" +
-            "\t\t\t\tFROM\n" +
-            "\t\t\t\t\ttb_mission_team\n" +
-            "\t\t\t\tWHERE\n" +
-            "\t\t\t\t\tteam_id = #{id}\n" +
-            "\t\t\t\tAND `status` = \"done\"\n" +
-            "\t\t\t)\n" +
-            "\t\tGROUP BY\n" +
-            "\t\t\td.mission_award_type\n" +
-            "\t)e\n" +
-            "WHERE\n" +
-            "\ta.`team_id` IN(\n" +
-            "\t\tSELECT\n" +
-            "\t\t\tb.team_id misid\n" +
-            "\t\tFROM\n" +
-            "\t\t\ttb_mission_team b\n" +
-            "\t\tWHERE\n" +
-            "\t\t\tb.`team_id` = #{id}\n" +
-            "\t\tAND `status` = \"done\"\n" +
-            "\t)\n" +
-            "AND a.team_id = c.team_id")
+            "a.team_id,\n" +
+            "            a.team_name,\n" +
+            "           a.team_desc,\n" +
+            "            a.`level`,\n" +
+            "            a.team_technology,\n" +
+            "            a.team_info,\n" +
+            "            c.peopleCount,\n" +
+            "\t\t\te.makeDeal,\n" +
+            "            e.atype,\n" +
+            "            e.makeMoney,\n" +
+            "            makeDeal\n" +
+            "            FROM\n" +
+            "            tb_team a,\n" +
+            "            (\n" +
+            "            SELECT\n" +
+            "            COUNT(user_id)AS peoplecount,\n" +
+            "           team_id\n" +
+            "       FROM\n" +
+            "            tb_team_user\n" +
+            "            WHERE\n" +
+            "            team_id = #{id}\n" +
+            "            )c,\n" +
+            "            (\n" +
+            "            SELECT\n" +
+            "            count(d.id)makeDeal,\n" +
+            "        d.mission_award_type atype,\n" +
+            "            SUM(d.mission_award)makeMoney\n" +
+            "            FROM\n" +
+            "            tb_missions d\n" +
+            "           WHERE\n" +
+            "            d.id IN(\n" +
+            "            SELECT\n" +
+            "            mission_id\n" +
+            "            FROM\n" +
+            "            tb_mission_team\n" +
+            "           WHERE\n" +
+            "            team_id = #{id}\n" +
+            "          AND `status` = \"done\"\n" +
+            "            )\n" +
+            "            GROUP BY\n" +
+            "            d.mission_award_type\n" +
+            "            )e\n" +
+            "            WHERE\n" +
+            "           a.`team_id` IN(\n" +
+            "            SELECT\n" +
+            "            b.team_id misid\n" +
+            "            FROM\n" +
+            "       tb_mission_team b\n" +
+            "            WHERE\n" +
+            "            b.`team_id` = #{id}\n" +
+            "            AND `status` = \"done\"\n" +
+            "          )\n" +
+            "            AND a.team_id = c.team_id")
     @Results({
             @Result(property = "id",column ="id" ),
             @Result(property = "teamName",column ="team_name" ),
