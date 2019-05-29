@@ -6,9 +6,9 @@ wx-applet:
 
 #==================== Tomcat Setting =====================#
 http:
-  port: 8080
+  port: 80
 server:
-  port: 1100
+  port: 443
   ssl:
     key-store: cert-1542771005276_antony0127.cn.jks
     key-store-password: 1P4u9dwU
@@ -21,6 +21,9 @@ logging:
   level:
     org.springframework: info
     org.hibernate: info
+    com.bth.lht.dao : debug
+
+
   file: logs/we-lightHouse.log
 
 #==================== spring Setting =====================#

@@ -53,7 +53,7 @@ public interface MissionDao {
             "FROM\n" +
             "  `db_lht`.`tb_missions` WHERE id IN (\n" +
             "\n" +
-            "SELECT mission_id FROM tb_mission_team WHERE team_id=#{id}" +
+            "SELECT mission_id FROM tb_mission_team WHERE team_id=#{id，jdbcType=VARCHAR}" +
             "\n" +
             ")")
     //团队任务

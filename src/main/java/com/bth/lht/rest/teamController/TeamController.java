@@ -73,9 +73,6 @@ public class TeamController extends BaseController {
 
         //等级
         teamEO.setLevel("0");
-
-
-        System.out.println(teamEO.toString());
         log.info("[openid]开始创建团队", openid);
         teamService.addTeam(teamEO);
         log.info("[openid]成功创建团队", openid);
@@ -188,6 +185,7 @@ public class TeamController extends BaseController {
     public OneResponse<TeamVO> findByTeamId(@PathVariable("id") String id) {
         //根据团队Id查找团队接受的任务
         TeamVO teamVO = teamVoService.findByTeamId(id);
+        System.out.println("你是瓜皮嘛"+teamVO);
         List<MissionVO> missionVOS = missionVoService.findAllByTeamId(id);
         if (teamVO != null) {
             teamVO.setMissionVOS(missionVOS);

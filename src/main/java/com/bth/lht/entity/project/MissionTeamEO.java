@@ -6,6 +6,8 @@ import com.bth.lht.entity.user.UserEO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.ToString;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 import javax.persistence.*;
 
@@ -30,6 +32,7 @@ public class MissionTeamEO extends BaseEntity {
 
     @ManyToOne(targetEntity = TeamEO.class)
     @JoinColumn(name = "team_id",referencedColumnName = "id")
+    @NotFound(action= NotFoundAction.IGNORE)
     private TeamEO teamEO;
 
 }

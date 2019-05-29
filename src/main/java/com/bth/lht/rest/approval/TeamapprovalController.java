@@ -149,24 +149,59 @@ public class TeamapprovalController extends BaseController {
     //任务的审批通过
     @PostMapping("approvalMission")
     public OneResponse arrgreeMission(@RequestBody @Validated MissionApprovalRequest missionApprovalRequest) {
-        MissionsEO missionsEO = missionsService.get(missionApprovalRequest.getMissionId());
-        UserEO userEO = null;
-        TeamEO teamEO = null;
-        if (missionApprovalRequest.getUserId() != null) {
-            userEO = userService.findById(missionApprovalRequest.getUserId());
+
+        MissionsEO missionsEO = new MissionsEO();
+
+        if ("1".equals(missionApprovalRequest.getResult())){
+            if (missionApprovalRequest!=null || missionApprovalRequest.getMissionId()!=null)
+            {
+                missionsEO = missionsService.get(missionApprovalRequest.getMissionId());
+
+            }
+            UserEO userEO = null;
+            TeamEO teamEO = null;
+            if (missionApprovalRequest.getUserId() != null) {
+                userEO = userService.findById(missionApprovalRequest.getUserId());
 
 
-            MissionUserEO missionUserEO = missionUserService.findMissionUserEOByUserEOAndMissionsEO(userEO, missionsEO);
-            missionUserEO.setStatus("done");
+                MissionUserEO missionUserEO = missionUserService.findMissionUserEOByUserEOAndMissionsEO(userEO, missionsEO);
+                missionUserEO.setStatus("done");
 //             missionVO = ModelMapperUtil.getStrictModelMapper(missionUserService.save(missionUserEO),new TypeToken<MissionVO>(){}.getType());
 
-            return successOne(missionUserService.save(missionUserEO));
-        } else if (missionApprovalRequest.getTeamId() != null) {
-            teamEO = teamService.getById(missionApprovalRequest.getTeamId());
-            MissionTeamEO missionTeamEO = missionTeamService.findByTeamEOAndMissionsEO(teamEO,missionsEO);
-            missionTeamEO.setStatus("done");
-            return successOne(missionTeamService.save(missionTeamEO));
+                return successOne(missionUserService.save(missionUserEO));
+            } else if (missionApprovalRequest.getTeamId() != null) {
+                teamEO = teamService.getById(missionApprovalRequest.getTeamId());
+                MissionTeamEO missionTeamEO = missionTeamService.findByTeamEOAndMissionsEO(teamEO,missionsEO);
+                missionTeamEO.setStatus("done");
+                return successOne(missionTeamService.save(missionTeamEO));
+            }
+        }else {
+
+
+            if (missionApprovalRequest!=null || missionApprovalRequest.getMissionId()!=null)
+            {
+                missionsEO = missionsService.get(missionApprovalRequest.getMissionId());
+
+            }
+            UserEO userEO = null;
+            TeamEO teamEO = null;
+            if (missionApprovalRequest.getUserId() != null) {
+                userEO = userService.findById(missionApprovalRequest.getUserId());
+
+
+                MissionUserEO missionUserEO = missionUserService.findMissionUserEOByUserEOAndMissionsEO(userEO, missionsEO);
+                missionUserEO.setStatus("refuse");
+//             missionVO = ModelMapperUtil.getStrictModelMapper(missionUserService.save(missionUserEO),new TypeToken<MissionVO>(){}.getType());
+
+                return successOne(missionUserService.save(missionUserEO));
+            } else if (missionApprovalRequest.getTeamId() != null) {
+                teamEO = teamService.getById(missionApprovalRequest.getTeamId());
+                MissionTeamEO missionTeamEO = missionTeamService.findByTeamEOAndMissionsEO(teamEO,missionsEO);
+                missionTeamEO.setStatus("refuse");
+                return successOne(missionTeamService.save(missionTeamEO));
+            }
         }
+
         return  null;
     }
 
@@ -241,16 +276,18 @@ public class TeamapprovalController extends BaseController {
                 //将关于这个任务的所有关联提都放在一起
                 missionTeamEOS.addAll(missionTeamService.findAllByMissionsEO(missionsEOS.get(i)));
 
+                if (missionsEOS.size() > 0) {
+                    for (MissionTeamEO mt : missionTeamEOS
+                    ) {
+                        System.out.println("正在输出："+mt);
+                        teamEOS.add(teamService.getById(mt.getTeamEO().getId()));
+                        teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS, new TypeToken<List<TeamVO>>() {
+                        }.getType());
 
-                for (MissionTeamEO mt : missionTeamEOS
-                ) {
-                    teamEOS.add(teamService.getById(mt.getTeamEO().getId()));
-                    teamVOS = ModelMapperUtil.getStrictModelMapper().map(teamEOS, new TypeToken<List<TeamVO>>() {
-                    }.getType());
 
-
+                    }
+                    missionTeamAppovalVOS.get(i).setTeamVOS(teamVOS);
                 }
-                missionTeamAppovalVOS.get(i).setTeamVOS(teamVOS);
             }
         }
         return successMulti(missionTeamAppovalVOS);

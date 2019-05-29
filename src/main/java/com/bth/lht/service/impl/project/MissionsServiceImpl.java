@@ -25,6 +25,11 @@ public class MissionsServiceImpl implements MissionsService {
 
 
     @Override
+    public List<MissionsEO> findAllByOrderByCreateDateDesc() {
+        return missionsRepository.findAllByOrderByCreateDateDesc();
+    }
+
+    @Override
     public List<MissionsEO> list() {
         return missionsRepository.findAll();
     }

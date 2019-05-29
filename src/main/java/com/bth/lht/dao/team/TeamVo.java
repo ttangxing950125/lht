@@ -16,7 +16,7 @@ public interface TeamVo {
             "(\n" +
             "SELECT COUNT(user_id) AS peoplecount,team_id FROM tb_team_user GROUP BY team_id\n" +
             ") c \n" +
-            "WHERE  a.team_id = c.team_id ORDER BY a.level DESC LIMIT 0,3\n")
+            "WHERE  a.id = c.team_id ORDER BY a.level DESC LIMIT 0,3\n")
     @Results({
             @Result(property = "id",column ="id" ),
             @Result(property = "teamName",column ="team_name" ),
@@ -31,8 +31,9 @@ public interface TeamVo {
 
 
     // 根据id查找团队
+
     @Select("SELECT\n" +
-            "a.team_id,\n" +
+            "a.id,\n" +
             "            a.team_name,\n" +
             "           a.team_desc,\n" +
             "            a.`level`,\n" +
@@ -52,7 +53,7 @@ public interface TeamVo {
             "       FROM\n" +
             "            tb_team_user\n" +
             "            WHERE\n" +
-            "            team_id = #{id}\n" +
+            "            team_id = #{id,jdbcType=VARCHAR}\n" +
             "            )c,\n" +
             "            (\n" +
             "            SELECT\n" +
@@ -68,23 +69,23 @@ public interface TeamVo {
             "            FROM\n" +
             "            tb_mission_team\n" +
             "           WHERE\n" +
-            "            team_id = #{id}\n" +
+            "            team_id = #{id,jdbcType=VARCHAR}\n" +
             "          AND `status` = \"done\"\n" +
             "            )\n" +
             "            GROUP BY\n" +
             "            d.mission_award_type\n" +
             "            )e\n" +
             "            WHERE\n" +
-            "           a.`team_id` IN(\n" +
+            "           a.`id` IN(\n" +
             "            SELECT\n" +
             "            b.team_id misid\n" +
             "            FROM\n" +
             "       tb_mission_team b\n" +
             "            WHERE\n" +
-            "            b.`team_id` = #{id}\n" +
+            "            b.`team_id` = #{id,jdbcType=VARCHAR}\n" +
             "            AND `status` = \"done\"\n" +
             "          )\n" +
-            "            AND a.team_id = c.team_id")
+            "            AND a.id = c.team_id")
     @Results({
             @Result(property = "id",column ="id" ),
             @Result(property = "teamName",column ="team_name" ),

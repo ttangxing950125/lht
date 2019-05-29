@@ -175,4 +175,15 @@ public class MissionController extends BaseController {
         return  successMulti(missionVOS);
     }
 
+    /**
+     * 查找热门任务
+     */
+        @GetMapping("/hotMission")
+        public MultiResponse findMissionHot(){
+
+            List<MissionsEO> missionsEOS = missionsService.findAllByOrderByCreateDateDesc();
+            List<MissionVO> missionVOS = ModelMapperUtil.getStrictModelMapper().map(missionsEOS, new TypeToken<List<MissionVO>>(){}.getType());
+            return successMulti(missionVOS);
+
+        }
 }

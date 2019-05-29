@@ -1,6 +1,7 @@
 package com.bth.lht.service.impl;
 
 import com.bth.lht.dao.team.MissionDao;
+import com.bth.lht.entity.project.MissionsEO;
 import com.bth.lht.respose.mission.MissionVO;
 import com.bth.lht.service.MissionVoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,4 +18,11 @@ public class MissionVoServiceImpl implements MissionVoService {
     public List<MissionVO> findAllByTeamId(String id) {
         return missionDao.findAllByTeamId(id);
     }
+
+    @Override
+    public List<MissionsEO> findAllByOrderByCreateDateDesc() {
+        return null;
+    }
+
+
 }

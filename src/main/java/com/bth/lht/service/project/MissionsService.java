@@ -14,6 +14,7 @@ import java.util.List;
  * @create: 2019-03-19 10:06
  **/
 public interface MissionsService {
+    List<MissionsEO> findAllByOrderByCreateDateDesc();
     public List<MissionsEO> list();
     MissionsEO save(MissionsEO missionsEO);
     MissionsEO get(String id);
